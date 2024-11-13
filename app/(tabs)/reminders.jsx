@@ -1,20 +1,20 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Profile = () => {
+const Reminders = () => {
   return (
     <View style={styles.container}>
-      <Text>Profile</Text>
+      <Text>Reminders</Text>
     </View>
   )
 }
 
-export default Profile
+export default Reminders
 
 const styles = StyleSheet.create({
-  container:{
-	  flex:1,
-	  justifyContent: 'center',
+	container:{
+    flex:1,
+    justifyContent: 'center',
 	  alignItems: 'center',    
   }
 })

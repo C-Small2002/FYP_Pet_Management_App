@@ -4,7 +4,7 @@ import React from 'react'
 
 const PetProfiles = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>PetProfiles</Text>
     </View>
   )
@@ -12,4 +12,10 @@ const PetProfiles = () => {
 
 export default PetProfiles
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',    
+  }
+})

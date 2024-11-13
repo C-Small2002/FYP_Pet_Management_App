@@ -40,6 +40,22 @@ const TabsLayout = () => {
         />
 
         <Tabs.Screen
+            name="reminders"
+            options={{
+            title: 'Reminders',
+            headerShown: false,
+            tabBarIcon: ({color, focused}) => (
+                <TabIcon
+                    icon={icons.reminders}
+                    color={color}
+                    name="Reminders"
+                    focused={focused}
+                />
+            )
+        }}
+        />
+
+        <Tabs.Screen
             name="vetlocator"
             options={{
             title: 'Vet Locator',

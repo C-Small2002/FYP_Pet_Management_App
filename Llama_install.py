@@ -2,9 +2,11 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndB
 import transformers
 from torch import cuda, bfloat16
 import torch
+from flask import Flask, jsonify, request
 
-import bitsandbytes
+app = Flask(__name__)
 
+#config for loading in 4-bit percision
 bnb_config = transformers.BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type='nf4',
@@ -14,10 +16,7 @@ bnb_config = transformers.BitsAndBytesConfig(
 
 
 model_name = "meta-llama/Llama-2-7b-chat-hf"
-
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -26,10 +25,11 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
+#disabling cache avoids excessive memory use
 model.config.use_cache = False
 model.config.pretraining_tp = 1
 
-pipelines = pipeline(
+text_generation = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
@@ -37,15 +37,25 @@ pipelines = pipeline(
     device_map="auto",
 )
 
-sequences = pipelines(
-    'My Pet, a Boxer, has been sick recently. She is currently 9 and has recently started limping. What could be the cause. Please give some suggestions of how i can look after my pet\n',
-    do_sample=True,
-    top_k=10,
-    num_return_sequences=1,
-    eos_token_id=tokenizer.eos_token_id,
-    #truncation = True,
-    #max_length=100
-)
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.json
+    input = data.get("message", "")
 
-for seq in sequences:
-    print(f"Result: {seq['generated_text']}")
+    sequences = text_generation(
+        input,
+        do_sample=True,
+        top_k=10,
+        num_return_sequences=1,
+        eos_token_id=tokenizer.eos_token_id,
+        #truncation = True,
+        #max_length=100
+    )
+
+    response = sequences[0]["generated_text"] if sequences else "No response generated"
+
+    return jsonify({"response": response})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
