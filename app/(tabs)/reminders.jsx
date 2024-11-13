@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import styles from '../../constants/styles'
 
 const Reminders = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.defaultContainer}>
       <Text>Reminders</Text>
     </View>
   )
@@ -11,10 +12,3 @@ const Reminders = () => {
 
 export default Reminders
 
-const styles = StyleSheet.create({
-	container:{
-    flex:1,
-    justifyContent: 'center',
-	  alignItems: 'center',    
-  }
-})

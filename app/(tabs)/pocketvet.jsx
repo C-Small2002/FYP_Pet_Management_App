@@ -1,6 +1,8 @@
-import { Button, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Button, ScrollView, StyleSheet, Text, TextInput, View, Dimensions } from 'react-native'
 import React, {useState} from 'react'
 import axios from 'axios'
+import { SafeAreaView } from 'react-native-safe-area-context';
+import styles from '../../constants/styles';
 
 const PocketVet = () => {
 
@@ -38,81 +40,29 @@ const PocketVet = () => {
 
   
   return (
-    <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}> 
-        {messages.map((msg, index) => (
-          <Text key={index} style={msg.from === 'user' ? styles.userText: styles.vetText}>
-            {msg.text}
-          </Text>
-        ))}
-      </ScrollView>
+    <SafeAreaView style={styles.vetContainer}>
+      
+        <ScrollView style={styles.vetContainer} contentContainerStyle={styles.scrollContent}> 
+          {messages.map((msg, index) => (
+            <Text key={index} style={msg.from === 'user' ? styles.userText: styles.vetText}>
+              {msg.text}
+            </Text>
+          ))}
+        </ScrollView>
 
-      <View style={styles.inputView}>
-        <TextInput 
-          style={styles.input}
-          value={input}
-          onChangeText={setInput}
-          placeholder='Type Something...'
-        />
+        <View style={styles.inputView}>
+          <TextInput 
+            style={styles.input}
+            value={input}
+            onChangeText={setInput}
+            onSubmitEditing={sendMessage} //submits when enter is pressed
+            placeholder='Type Something...'
+          />
 
-        <Button title="submit" onPress={sendMessage}/>
-      </View>
+        </View>
 
-    </View>
+      </SafeAreaView>
   )
 }
 
 export default PocketVet
-
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-  },
-
-  scrollContainer:{
-    flex:1,
-    padding:10
-  },
-
-  scrollContent:{
-    justifyContent:'flex-end'
-  },
-
-  userText:{
-    textAlign:'right',
-    padding: 10,
-    marginVertical: 5,
-    backgroundColor:'#3066be',
-    alignSelf: 'flex-end',
-    borderRadius: 10,
-    maxWidth:'75%'
-  },
-
-  vetText: {
-    textAlign: 'left',
-    padding: 10,
-    marginVertical: 5,
-    backgroundColor:'#fbfff1',
-    alignSelf: 'flex-start',
-    borderRadius: 10,
-    maxWidth:'75%'
-  },
-
-  inputView:{
-    flexDirection:'row',
-    alignItems:'center',
-    padding:10,
-    borderTopWidth: 1,
-    borderTopColor: '#ddd'
-  },
-
-  input:{
-    flex:1,
-    borderColor: 'blue',
-    borderWidth: 1,
-    borderRadius: 20,
-    paddingHorizontal: 15,
-    paddingVertical: 8,
-    marginRight: 10
-  }
-});
