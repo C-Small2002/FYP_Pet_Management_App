@@ -26,9 +26,7 @@ const PetProfiles = () => {
       weight: '',
       height:'',
       chipnumber: '123456789',
-      medicalconditions: {
-        injury1: 'Cruciate Ligament Injury'
-      }
+      medicalconditions: ['Cruciate Ligament Injury', 'Allergy to Wheat']
     },
     cat: {
       name: 'Tinky Winky',
@@ -39,9 +37,7 @@ const PetProfiles = () => {
       weight: '12 lbs',
       height:'1 meter',
       chipnumber: '123456789',
-      medicalconditions: {
-        
-      }
+      medicalconditions: []
     }
   };
 
@@ -60,16 +56,51 @@ const PetProfiles = () => {
 
       <PetDropdown data={petProfiles} onSelect={handlePetSelect}/>
 
-      <ScrollView style={styles.ScrollView}>
+      <ScrollView >
         {selectedPetData && (
-          <View>
-            <Text>Name: {selectedPetData.name}</Text>
-            <Text>Breed: {selectedPetData.breed}</Text>
-            <Text>Age: {selectedPetData.age}</Text>
-            <Text>DOB: {selectedPetData.dob}</Text>
-            <Text>Sex: {selectedPetData.sex}</Text>
-            <Text>Chip Number: {selectedPetData.chipnumber}</Text>
+          <View style={styles.profileContainer}>
+            <Text style={styles.header}>Basic Information</Text>
+            <View style={styles.displayRow}>
+              <Text style={styles.label}>Name: </Text>
+              <Text style={styles.value}>{selectedPetData.name}</Text>
+            </View>
+            <View style={styles.displayRow}>
+              <Text style={styles.label}>Breed: </Text>
+              <Text style={styles.value}>{selectedPetData.breed}</Text>
+            </View>
+            <View style={styles.displayRow}>
+              <Text style={styles.label}>Age: </Text>
+              <Text style={styles.value}>{selectedPetData.age}</Text>
+            </View>
+            <View style={styles.displayRow}>
+              <Text style={styles.label}>Date Of Birth</Text>
+              <Text style={styles.value}>{selectedPetData.dob}</Text>
+            </View>
+            <View style={styles.displayRow}>
+              <Text style={styles.label}>Sex: </Text>
+              <Text style={styles.value}>{selectedPetData.sex}</Text>
+            </View>
+            <View style={styles.displayRow}>
+              <Text style={styles.label}>Chip Number: </Text>
+              <Text style={styles.value}>{selectedPetData.chipnumber}</Text>
+            </View>
+
           </View>
+
+        )}
+
+        {selectedPetData && selectedPetData.medicalconditions.length > 0 && (
+          <>
+            <View style={styles.profileContainer}>
+              <Text style={styles.header}>Medical Conditions</Text>
+              {selectedPetData.medicalconditions.map((condition, index) => (
+                <View style={styles.displayRow}>
+                  <Text style={styles.label}>Condition {index+1}</Text>
+                  <Text style={styles.value}> { condition} </Text> 
+                </View>
+              ))}
+            </View>
+          </>
         )}
       </ScrollView>
     </SafeAreaView>

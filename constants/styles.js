@@ -1,11 +1,13 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 const COLOURS = {
-    primary: '#4287f5',
-		secondary: '#3066be',
-		accentWhite: '#ffffff',
-		accentBlue: '#E8F1FF',
-		backgroundGray: '#F2F2F2'
+  primary: '#4287f5',
+	secondary: '#3066be',
+  black: '#000',
+	accentWhite: '#ffffff',
+	accentBlue: '#E8F1FF',
+	backgroundGray: '#F2F2F2',
+  backgroundWhite: '#F9F9F9'
 }
 
 const {width, height} = Dimensions.get('window'); //gets the width and height of the devices screen
@@ -14,8 +16,7 @@ export default StyleSheet.create({
 
   defaultContainer:{
     flex:1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: width * 0.05,
  	},
 
   userText:{
@@ -59,7 +60,6 @@ export default StyleSheet.create({
   vetContainer:{
     flex:1,
     paddingTop: height*0.03
-    
   },
 
   scrollContent:{
@@ -68,7 +68,7 @@ export default StyleSheet.create({
   },
 
 	dropdownContainer:{
-		width: width,
+		width: width *0.90,
 		paddingBottom : height *0.02
 	},
 
@@ -81,6 +81,43 @@ export default StyleSheet.create({
 		borderWidth: 1,
 		borderColor: COLOURS.secondary,
 		backgroundColor:COLOURS.accentWhite,
-	}
+	},
+
+  profileContainer:{
+    marginTop: height *0.02,
+    padding: width*0.04,
+    backgroundColor :COLOURS.backgroundWhite,
+    borderRadius: 10,
+    //shadows for IOS
+    shadowColor: COLOURS.black,
+    shadowOpacity: 0.1,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 4,
+    // shadows for Android
+    elevation: 3 
+  },
+
+  displayRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom  : height *0.01
+  },
+
+  label:{
+    fontSize:width * 0.04,
+    flex:1
+  },
+
+  value: {
+    fontSize: width *0.04,
+    flex: 2,
+    textAlign: 'right'
+  },
+
+  header:{
+    fontSize: width * 0.05,
+    fontWeight: 'bold',
+    marginBottom: height *0.01
+  }
 
 })  
