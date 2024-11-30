@@ -1,0 +1,1726 @@
+[
+    {
+        "prompt": "Animal Type: Dog\nBreed: Labrador\nAge: 4\nGender: Male\nWeight: 25.0\nSymptoms: Fever, Lethargy, Appetite Loss, Vomiting\nDuration: 3 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 2\nGender: Female\nWeight: 4.5\nSymptoms: Coughing, Sneezing, Eye Discharge, Nasal Discharge\nDuration: 1 week\nBody Temperature: 38.9\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 3\nGender: Female\nWeight: 600.0\nSymptoms: Fever, Nasal Discharge, Labored Breathing, Coughing\nDuration: 5 days\nBody Temperature: 40.1\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot and Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 1\nGender: Male\nWeight: 10.0\nSymptoms: Diarrhea, Vomiting, Lethargy, Appetite Loss\nDuration: 2 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 5\nGender: Male\nWeight: 3.8\nSymptoms: Lethargy, Appetite Loss, Skin Lesions, No\nDuration: 2 weeks\nBody Temperature: 38.7\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Fungal Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 6\nGender: Female\nWeight: 500.0\nSymptoms: Coughing, Labored Breathing, Nasal Discharge, Fever\nDuration: 10 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: German Shepherd\nAge: 3\nGender: Female\nWeight: 30.0\nSymptoms: Lameness, Fever, Skin Lesions, Lethargy\nDuration: 7 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Lyme Disease"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 2\nGender: Male\nWeight: 6.0\nSymptoms: Vomiting, Appetite Loss, Lethargy, Diarrhea\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Intestinal Parasites"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Bulldog\nAge: 5\nGender: Male\nWeight: 23.0\nSymptoms: Labored Breathing, Coughing, Nasal Discharge, Appetite Loss\nDuration: 6 days\nBody Temperature: 40.0\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 4\nGender: Female\nWeight: 580.0\nSymptoms: Lethargy, Decreased Milk Yield, Fever, No\nDuration: 8 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Mastitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 3\nGender: Female\nWeight: 5.0\nSymptoms: Lethargy, Eye Discharge, Vomiting, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Panleukopenia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 2\nGender: Female\nWeight: 12.0\nSymptoms: Lethargy, Appetite Loss, Coughing, Vomiting\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 1\nGender: Male\nWeight: 4.2\nSymptoms: Vomiting, Diarrhea, Lethargy, Appetite Loss\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Panleukopenia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 8\nGender: Female\nWeight: 490.0\nSymptoms: Lameness, Fever, Coughing, Nasal Discharge\nDuration: 1 week\nBody Temperature: 39.9\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Strangles"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Hereford\nAge: 5\nGender: Male\nWeight: 650.0\nSymptoms: Fever, Lethargy, Decreased Milk Yield, Appetite Loss\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 4\nGender: Female\nWeight: 3.5\nSymptoms: Lethargy, Vomiting, Diarrhea, Coughing\nDuration: 2 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Ragdoll\nAge: 3\nGender: Male\nWeight: 5.0\nSymptoms: Skin Lesions, Appetite Loss, Lethargy, Vomiting\nDuration: 10 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Ringworm"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Siberian Husky\nAge: 6\nGender: Male\nWeight: 28.0\nSymptoms: Lameness, Fever, Skin Lesions, Lethargy\nDuration: 8 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Tick-Borne Disease"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 10\nGender: Male\nWeight: 700.0\nSymptoms: Coughing, Nasal Discharge, Labored Breathing, Fever\nDuration: 2 weeks\nBody Temperature: 40.2\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: British Shorthair\nAge: 5\nGender: Female\nWeight: 4.8\nSymptoms: Lethargy, Eye Discharge, Appetite Loss, Nasal Discharge\nDuration: 1 week\nBody Temperature: 39.0\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 3\nGender: Female\nWeight: 590.0\nSymptoms: Decreased Milk Yield, Fever, Appetite Loss, Lethargy\nDuration: 7 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Mastitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 7\nGender: Male\nWeight: 450.0\nSymptoms: Lethargy, Appetite Loss, Fever, Labored Breathing\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 2\nGender: Female\nWeight: 8.0\nSymptoms: Coughing, Nasal Discharge, Appetite Loss, Lethargy\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 3\nGender: Male\nWeight: 5.5\nSymptoms: Lethargy, Vomiting, Diarrhea, Dehydration\nDuration: 3 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Panleukopenia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 5\nGender: Female\nWeight: 700.0\nSymptoms: Fever, Decreased Milk Yield, Lethargy, Nasal Discharge\nDuration: 7 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 4\nGender: Male\nWeight: 30.0\nSymptoms: Lameness, Swelling, Appetite Loss, Fever\nDuration: 10 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Russian Blue\nAge: 2\nGender: Female\nWeight: 4.5\nSymptoms: Coughing, Nasal Discharge, Eye Discharge, Sneezing\nDuration: 5 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Quarter Horse\nAge: 9\nGender: Female\nWeight: 480.0\nSymptoms: Coughing, Nasal Discharge, Fever, Labored Breathing\nDuration: 6 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Rhinopneumonitis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 1\nGender: Male\nWeight: 3.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 3 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 135bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Ragdoll\nAge: 6\nGender: Male\nWeight: 6.0\nSymptoms: Appetite Loss, Weight Loss, Vomiting, Lethargy\nDuration: 2 weeks\nBody Temperature: 39.0\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Hereford\nAge: 3\nGender: Female\nWeight: 650.0\nSymptoms: Lethargy, Fever, Decreased Milk Yield, Nasal Discharge\nDuration: 8 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Mastitis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: German Shepherd\nAge: 5\nGender: Male\nWeight: 30.0\nSymptoms: Lethargy, Labored Breathing, Coughing, Appetite Loss\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Heartworm Disease"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 6\nGender: Female\nWeight: 7.5\nSymptoms: Appetite Loss, Vomiting, Diarrhea, Skin Lesions\nDuration: 4 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 9\nGender: Male\nWeight: 500.0\nSymptoms: Nasal Discharge, Coughing, Labored Breathing, Lethargy\nDuration: 10 days\nBody Temperature: 40.0\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Viral Arteritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 4\nGender: Female\nWeight: 580.0\nSymptoms: Appetite Loss, Diarrhea, Lethargy, Decreased Milk Yield\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 2\nGender: Female\nWeight: 9.0\nSymptoms: Fever, Vomiting, Lethargy, Skin Lesions\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 132bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 8\nGender: Male\nWeight: 4.6\nSymptoms: Appetite Loss, Vomiting, Eye Discharge, Lethargy\nDuration: 2 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Conjunctivitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Appaloosa\nAge: 6\nGender: Female\nWeight: 520.0\nSymptoms: Lameness, Fever, Skin Lesions, Appetite Loss\nDuration: 5 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Piroplasmosis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 3\nGender: Male\nWeight: 620.0\nSymptoms: Diarrhea, Lethargy, Appetite Loss, Decreased Milk Yield\nDuration: 8 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Salmonellosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Dachshund\nAge: 7\nGender: Male\nWeight: 5.5\nSymptoms: Coughing, Labored Breathing, Lethargy, Appetite Loss\nDuration: 2 weeks\nBody Temperature: 39.5\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Chronic Bronchitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Sphynx\nAge: 4\nGender: Female\nWeight: 3.2\nSymptoms: Eye Discharge, Nasal Discharge, Appetite Loss, Lethargy\nDuration: 1 week\nBody Temperature: 39.3\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 4\nGender: Female\nWeight: 28.0\nSymptoms: Lethargy, Vomiting, Diarrhea, Loss of Appetite\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: British Shorthair\nAge: 3\nGender: Male\nWeight: 5.5\nSymptoms: Appetite Loss, Coughing, Nasal Discharge, Eye Discharge\nDuration: 4 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 10\nGender: Female\nWeight: 450.0\nSymptoms: Lameness, Fever, Swollen Joints, Lethargy\nDuration: 8 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 6\nGender: Male\nWeight: 600.0\nSymptoms: Coughing, Nasal Discharge, Labored Breathing, Fever\nDuration: 7 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Bulldog\nAge: 5\nGender: Male\nWeight: 22.0\nSymptoms: Vomiting, Appetite Loss, Fever, Diarrhea\nDuration: 3 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 138bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 2\nGender: Female\nWeight: 4.0\nSymptoms: Sneezing, Eye Discharge, Appetite Loss, Lethargy\nDuration: 2 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 135bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Quarter Horse\nAge: 12\nGender: Male\nWeight: 500.0\nSymptoms: Lameness, Fever, Swollen Joints, Reduced Appetite\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Hereford\nAge: 3\nGender: Female\nWeight: 570.0\nSymptoms: Lethargy, Diarrhea, Appetite Loss, Dehydration\nDuration: 6 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Viral Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 8\nGender: Male\nWeight: 15.0\nSymptoms: Coughing, Labored Breathing, Lethargy, Appetite Loss\nDuration: 1 week\nBody Temperature: 39.3\u00b0C\nHeart Rate: 126bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Abyssinian\nAge: 5\nGender: Female\nWeight: 4.5\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Dehydration\nDuration: 3 days\nBody Temperature: 38.5\u00b0C\nHeart Rate: 142bpm\nWhat is the most likely disease prediction?",
+        "response": "Pancreatitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 15\nGender: Male\nWeight: 600.0\nSymptoms: Appetite Loss, Lethargy, Labored Breathing, Coughing\nDuration: 10 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Brahman\nAge: 7\nGender: Female\nWeight: 620.0\nSymptoms: Fever, Coughing, Lethargy, Decreased Milk Yield\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Mastitis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Husky\nAge: 9\nGender: Male\nWeight: 25.0\nSymptoms: Lethargy, Vomiting, Diarrhea, Loss of Appetite\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 124bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Ragdoll\nAge: 4\nGender: Female\nWeight: 5.0\nSymptoms: Eye Discharge, Nasal Discharge, Coughing, Lethargy\nDuration: 6 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Morgan\nAge: 11\nGender: Female\nWeight: 520.0\nSymptoms: Lameness, Swollen Joints, Reduced Appetite, Weight Loss\nDuration: 7 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Laminitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Limousin\nAge: 2\nGender: Male\nWeight: 550.0\nSymptoms: Diarrhea, Lethargy, Appetite Loss, Dehydration\nDuration: 4 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Cryptosporidiosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Border Collie\nAge: 3\nGender: Female\nWeight: 17.0\nSymptoms: Coughing, Labored Breathing, Fever, Nasal Discharge\nDuration: 8 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 129bpm\nWhat is the most likely disease prediction?",
+        "response": "Bordetella Infection"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Devon Rex\nAge: 6\nGender: Male\nWeight: 4.2\nSymptoms: Vomiting, Appetite Loss, Lethargy, Weight Loss\nDuration: 9 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 146bpm\nWhat is the most likely disease prediction?",
+        "response": "Inflammatory Bowel Disease"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Standardbred\nAge: 7\nGender: Male\nWeight: 540.0\nSymptoms: Lameness, Swollen Joints, Lethargy, Weight Loss\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Degenerative Joint Disease"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Red Angus\nAge: 5\nGender: Female\nWeight: 620.0\nSymptoms: Fever, Diarrhea, Lethargy, Appetite Loss\nDuration: 4 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 3\nGender: Male\nWeight: 2.5\nSymptoms: Sneezing, Eye Discharge, Labored Breathing, Lethargy\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 131bpm\nWhat is the most likely disease prediction?",
+        "response": "Allergic Rhinitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Sphynx\nAge: 5\nGender: Female\nWeight: 3.0\nSymptoms: Vomiting, Appetite Loss, Diarrhea, Weight Loss\nDuration: 6 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 143bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Shire\nAge: 10\nGender: Female\nWeight: 680.0\nSymptoms: Lethargy, Fever, Appetite Loss, Weight Loss\nDuration: 10 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Guernsey\nAge: 4\nGender: Male\nWeight: 590.0\nSymptoms: Appetite Loss, Lethargy, Diarrhea, Dehydration\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 84bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Coccidiosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Dachshund\nAge: 7\nGender: Female\nWeight: 8.0\nSymptoms: Vomiting, Diarrhea, Weight Loss, Appetite Loss\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 9\nGender: Male\nWeight: 6.5\nSymptoms: Lethargy, Appetite Loss, Weight Loss, Dehydration\nDuration: 8 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Renal Disease"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 14\nGender: Male\nWeight: 520.0\nSymptoms: Coughing, Labored Breathing, Fever, Weight Loss\nDuration: 12 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 72bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 6\nGender: Female\nWeight: 600.0\nSymptoms: Fever, Nasal Discharge, Decreased Milk Yield, Lethargy\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 86bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Syncytial Virus"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Labrador Retriever\nAge: 11\nGender: Male\nWeight: 35.0\nSymptoms: Lethargy, Loss of Appetite, Fever, Vomiting\nDuration: 7 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 118bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 8\nGender: Female\nWeight: 5.0\nSymptoms: Coughing, Nasal Discharge, Eye Discharge, Loss of Appetite\nDuration: 4 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 147bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Viral Rhinotracheitis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: German Shepherd\nAge: 6\nGender: Female\nWeight: 30.0\nSymptoms: Coughing, Labored Breathing, Lethargy, Loss of Appetite\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Scottish Fold\nAge: 4\nGender: Male\nWeight: 4.8\nSymptoms: Sneezing, Eye Discharge, Appetite Loss, Lethargy\nDuration: 5 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 137bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Appaloosa\nAge: 10\nGender: Female\nWeight: 510.0\nSymptoms: Lameness, Fever, Swollen Joints, Reduced Appetite\nDuration: 9 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Laminitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 7\nGender: Male\nWeight: 590.0\nSymptoms: Coughing, Nasal Discharge, Labored Breathing, Lethargy\nDuration: 4 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 5\nGender: Male\nWeight: 10.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 132bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 3\nGender: Female\nWeight: 4.2\nSymptoms: Lethargy, Vomiting, Diarrhea, Dehydration\nDuration: 6 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Panleukopenia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 13\nGender: Male\nWeight: 490.0\nSymptoms: Fever, Nasal Discharge, Labored Breathing, Lethargy\nDuration: 8 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Simmental\nAge: 8\nGender: Female\nWeight: 630.0\nSymptoms: Loss of Appetite, Weight Loss, Lethargy, Reduced Milk Production\nDuration: 7 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Rottweiler\nAge: 7\nGender: Female\nWeight: 35.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Dehydration\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 127bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siberian\nAge: 2\nGender: Male\nWeight: 5.5\nSymptoms: Coughing, Sneezing, Nasal Discharge, Eye Discharge\nDuration: 4 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 144bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: American Quarter\nAge: 14\nGender: Female\nWeight: 520.0\nSymptoms: Swollen Joints, Lameness, Fever, Loss of Appetite\nDuration: 10 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Shorthorn\nAge: 5\nGender: Male\nWeight: 600.0\nSymptoms: Diarrhea, Dehydration, Lethargy, Loss of Appetite\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 84bpm\nWhat is the most likely disease prediction?",
+        "response": "Salmonellosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Shih Tzu\nAge: 4\nGender: Female\nWeight: 7.0\nSymptoms: Coughing, Labored Breathing, Appetite Loss, Lethargy\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 133bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Flu"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: American Curl\nAge: 5\nGender: Male\nWeight: 3.7\nSymptoms: Vomiting, Diarrhea, Dehydration, Weight Loss\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Pancreatitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Percheron\nAge: 12\nGender: Male\nWeight: 600.0\nSymptoms: Swollen Joints, Lameness, Appetite Loss, Weight Loss\nDuration: 5 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 72bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Brahman\nAge: 3\nGender: Female\nWeight: 570.0\nSymptoms: Fever, Nasal Discharge, Lethargy, Coughing\nDuration: 4 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 86bpm\nWhat is the most likely disease prediction?",
+        "response": "Respiratory Syncytial Virus"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 9\nGender: Male\nWeight: 2.0\nSymptoms: Vomiting, Loss of Appetite, Diarrhea, Lethargy\nDuration: 2 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 128bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Manx\nAge: 4\nGender: Female\nWeight: 3.3\nSymptoms: Eye Discharge, Nasal Discharge, Sneezing, Coughing\nDuration: 6 days\nBody Temperature: 38.5\u00b0C\nHeart Rate: 138bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Tennessee Walker\nAge: 16\nGender: Female\nWeight: 530.0\nSymptoms: Weight Loss, Loss of Appetite, Lethargy, Fever\nDuration: 8 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 71bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Cushing's Disease"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 6\nGender: Male\nWeight: 620.0\nSymptoms: Weight Loss, Reduced Milk Production, Lethargy, Appetite Loss\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 87bpm\nWhat is the most likely disease prediction?",
+        "response": "Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Dalmatian\nAge: 8\nGender: Female\nWeight: 20.0\nSymptoms: Vomiting, Diarrhea, Weight Loss, Dehydration\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Pancreatitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bombay\nAge: 6\nGender: Male\nWeight: 4.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Weight Loss\nDuration: 5 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 149bpm\nWhat is the most likely disease prediction?",
+        "response": "Hyperthyroidism"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Welsh Pony\nAge: 10\nGender: Male\nWeight: 450.0\nSymptoms: Lameness, Swollen Joints, Reduced Appetite, Weight Loss\nDuration: 9 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Brown Swiss\nAge: 3\nGender: Female\nWeight: 580.0\nSymptoms: Diarrhea, Dehydration, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Coccidiosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Akita\nAge: 6\nGender: Male\nWeight: 35.0\nSymptoms: Lethargy, Loss of Appetite, Fever, Vomiting\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Hepatitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: British Shorthair\nAge: 7\nGender: Female\nWeight: 4.4\nSymptoms: Nasal Discharge, Eye Discharge, Sneezing, Lethargy\nDuration: 4 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 142bpm\nWhat is the most likely disease prediction?",
+        "response": "Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Morgan\nAge: 11\nGender: Female\nWeight: 530.0\nSymptoms: Weight Loss, Swollen Joints, Reduced Appetite, Fever\nDuration: 8 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Guernsey\nAge: 5\nGender: Male\nWeight: 610.0\nSymptoms: Nasal Discharge, Coughing, Labored Breathing, Fever\nDuration: 3 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Boxer\nAge: 8\nGender: Female\nWeight: 27.0\nSymptoms: Vomiting, Lethargy, Diarrhea, Loss of Appetite\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 131bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Abyssinian\nAge: 4\nGender: Male\nWeight: 4.5\nSymptoms: Eye Discharge, Lethargy, Nasal Discharge, Sneezing\nDuration: 5 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 5\nGender: Male\nWeight: 32.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Lethargy\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 7\nGender: Female\nWeight: 4.1\nSymptoms: Sneezing, Nasal Discharge, Eye Discharge, Lethargy\nDuration: 4 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 142bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 15\nGender: Male\nWeight: 480.0\nSymptoms: Lameness, Swollen Joints, Appetite Loss, Fever\nDuration: 7 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Limousin\nAge: 6\nGender: Female\nWeight: 620.0\nSymptoms: Weight Loss, Reduced Milk Production, Appetite Loss, Lethargy\nDuration: 10 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Holland Lop\nAge: 3\nGender: Female\nWeight: 1.8\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Snuffles"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Merino\nAge: 4\nGender: Male\nWeight: 75.0\nSymptoms: Coughing, Labored Breathing, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 40.0\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 5\nGender: Female\nWeight: 68.0\nSymptoms: Diarrhea, Dehydration, Lethargy, Loss of Appetite\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Coccidiosis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Yorkshire\nAge: 2\nGender: Male\nWeight: 110.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Epidemic Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Dachshund\nAge: 4\nGender: Female\nWeight: 9.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Dehydration\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 132bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 6\nGender: Male\nWeight: 4.2\nSymptoms: Coughing, Sneezing, Eye Discharge, Lethargy\nDuration: 4 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 12\nGender: Female\nWeight: 600.0\nSymptoms: Fever, Swollen Joints, Appetite Loss, Lameness\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Laminitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 8\nGender: Male\nWeight: 580.0\nSymptoms: Coughing, Labored Breathing, Lethargy, Nasal Discharge\nDuration: 5 days\nBody Temperature: 40.0\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Rex\nAge: 2\nGender: Male\nWeight: 1.6\nSymptoms: Diarrhea, Loss of Appetite, Dehydration, Weight Loss\nDuration: 3 days\nBody Temperature: 38.5\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Enteritis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 3\nGender: Female\nWeight: 80.0\nSymptoms: Weight Loss, Lethargy, Loss of Appetite, Reduced Wool Growth\nDuration: 8 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Alpine\nAge: 4\nGender: Male\nWeight: 72.0\nSymptoms: Fever, Lethargy, Weight Loss, Loss of Appetite\nDuration: 7 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Duroc\nAge: 3\nGender: Female\nWeight: 115.0\nSymptoms: Sneezing, Coughing, Nasal Discharge, Labored Breathing\nDuration: 5 days\nBody Temperature: 40.0\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Corgi\nAge: 5\nGender: Male\nWeight: 11.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Weight Loss\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 134bpm\nWhat is the most likely disease prediction?",
+        "response": "Pancreatitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Burmese\nAge: 8\nGender: Female\nWeight: 4.5\nSymptoms: Eye Discharge, Nasal Discharge, Sneezing, Lethargy\nDuration: 6 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 139bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Viral Rhinotracheitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Paint\nAge: 14\nGender: Male\nWeight: 500.0\nSymptoms: Lameness, Weight Loss, Reduced Appetite, Swollen Joints\nDuration: 10 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Osteoarthritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Hereford\nAge: 7\nGender: Female\nWeight: 590.0\nSymptoms: Diarrhea, Dehydration, Lethargy, Appetite Loss\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 84bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Flemish Giant\nAge: 5\nGender: Female\nWeight: 6.8\nSymptoms: Lethargy, Appetite Loss, Weight Loss, Diarrhea\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastrointestinal Stasis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Dorper\nAge: 6\nGender: Male\nWeight: 65.0\nSymptoms: Coughing, Labored Breathing, Nasal Discharge, Appetite Loss\nDuration: 4 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Pasteurellosis"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 3\nGender: Female\nWeight: 70.0\nSymptoms: Diarrhea, Dehydration, Lethargy, Appetite Loss\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Giardiasis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 7\nGender: Female\nWeight: 15.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Diarrhea\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 5\nGender: Male\nWeight: 5.2\nSymptoms: Nasal Discharge, Eye Discharge, Sneezing, Lethargy\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 9\nGender: Female\nWeight: 460.0\nSymptoms: Lameness, Swollen Joints, Loss of Appetite, Reduced Mobility\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Lyme Disease"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 6\nGender: Male\nWeight: 570.0\nSymptoms: Coughing, Nasal Discharge, Labored Breathing, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Angora\nAge: 4\nGender: Female\nWeight: 2.1\nSymptoms: Sneezing, Nasal Discharge, Weight Loss, Lethargy\nDuration: 3 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Viral Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Cheviot\nAge: 5\nGender: Male\nWeight: 85.0\nSymptoms: Weight Loss, Reduced Wool Production, Lethargy, Loss of Appetite\nDuration: 7 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot-and-Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Toggenburg\nAge: 7\nGender: Female\nWeight: 65.0\nSymptoms: Diarrhea, Dehydration, Lethargy, Appetite Loss\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Coccidiosis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 2\nGender: Male\nWeight: 115.0\nSymptoms: Coughing, Nasal Discharge, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Shih Tzu\nAge: 8\nGender: Female\nWeight: 8.0\nSymptoms: Lethargy, Vomiting, Diarrhea, Loss of Appetite\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Hepatitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Scottish Fold\nAge: 4\nGender: Male\nWeight: 4.3\nSymptoms: Nasal Discharge, Eye Discharge, Sneezing, Lethargy\nDuration: 3 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 143bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Rhinotracheitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Belgian\nAge: 13\nGender: Female\nWeight: 650.0\nSymptoms: Lameness, Swollen Joints, Fever, Weight Loss\nDuration: 8 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Brown Swiss\nAge: 9\nGender: Male\nWeight: 600.0\nSymptoms: Labored Breathing, Nasal Discharge, Coughing, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 3\nGender: Male\nWeight: 1.9\nSymptoms: Sneezing, Eye Discharge, Nasal Discharge, Lethargy\nDuration: 2 days\nBody Temperature: 38.4\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Romney\nAge: 6\nGender: Female\nWeight: 78.0\nSymptoms: Weight Loss, Lethargy, Loss of Appetite, Swollen Joints\nDuration: 9 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Kiko\nAge: 3\nGender: Male\nWeight: 75.0\nSymptoms: Nasal Discharge, Fever, Weight Loss, Loss of Appetite\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Tamworth\nAge: 4\nGender: Female\nWeight: 120.0\nSymptoms: Vomiting, Diarrhea, Appetite Loss, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 84bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Dysentery"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 6\nGender: Male\nWeight: 13.0\nSymptoms: Coughing, Labored Breathing, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 127bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Russian Blue\nAge: 5\nGender: Female\nWeight: 4.7\nSymptoms: Eye Discharge, Nasal Discharge, Sneezing, Lethargy\nDuration: 5 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Shetland Pony\nAge: 11\nGender: Male\nWeight: 300.0\nSymptoms: Lameness, Swollen Joints, Appetite Loss, Weight Loss\nDuration: 7 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Osteoarthritis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 7\nGender: Female\nWeight: 650.0\nSymptoms: Coughing, Nasal Discharge, Appetite Loss, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Dutch\nAge: 2\nGender: Female\nWeight: 1.4\nSymptoms: Sneezing, Nasal Discharge, Lethargy, Loss of Appetite\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Lincoln\nAge: 8\nGender: Male\nWeight: 95.0\nSymptoms: Lethargy, Swollen Joints, Fever, Loss of Appetite\nDuration: 6 days\nBody Temperature: 39.9\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Footrot"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: LaMancha\nAge: 5\nGender: Female\nWeight: 72.0\nSymptoms: Diarrhea, Loss of Appetite, Lethargy, Dehydration\nDuration: 7 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastrointestinal Infection"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Poland China\nAge: 3\nGender: Male\nWeight: 110.0\nSymptoms: Fever, Coughing, Nasal Discharge, Weight Loss\nDuration: 6 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 87bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 7\nGender: Male\nWeight: 30.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Lethargy\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 118bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Sphynx\nAge: 4\nGender: Male\nWeight: 5.2\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 15\nGender: Female\nWeight: 700.0\nSymptoms: Swollen Joints, Lameness, Weight Loss, Lethargy\nDuration: 8 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Metabolic Syndrome"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Simmental\nAge: 8\nGender: Male\nWeight: 580.0\nSymptoms: Appetite Loss, Weight Loss, Fever, Lethargy\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Rex\nAge: 1\nGender: Female\nWeight: 1.2\nSymptoms: Nasal Discharge, Lethargy, Loss of Appetite, Sneezing\nDuration: 2 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 165bpm\nWhat is the most likely disease prediction?",
+        "response": "Pasteurellosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Rottweiler\nAge: 5\nGender: Female\nWeight: 42.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Coughing\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 3\nGender: Male\nWeight: 5.5\nSymptoms: Nasal Discharge, Coughing, Sneezing, Lethargy\nDuration: 5 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 7\nGender: Female\nWeight: 480.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 6\nGender: Male\nWeight: 550.0\nSymptoms: Coughing, Nasal Discharge, Fever, Weight Loss\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Male\nWeight: 1.6\nSymptoms: Nasal Discharge, Sneezing, Lethargy, Appetite Loss\nDuration: 3 days\nBody Temperature: 38.5\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Texel\nAge: 4\nGender: Female\nWeight: 85.0\nSymptoms: Lameness, Swollen Joints, Loss of Appetite, Diarrhea\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Blue Tongue Virus"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Alpine\nAge: 5\nGender: Male\nWeight: 72.0\nSymptoms: Vomiting, Diarrhea, Fever, Loss of Appetite\nDuration: 6 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Duroc\nAge: 3\nGender: Female\nWeight: 100.0\nSymptoms: Coughing, Nasal Discharge, Loss of Appetite, Lethargy\nDuration: 4 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 88bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Doberman Pinscher\nAge: 6\nGender: Male\nWeight: 40.0\nSymptoms: Vomiting, Lethargy, Loss of Appetite, Coughing\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 119bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 4\nGender: Female\nWeight: 4.2\nSymptoms: Nasal Discharge, Lethargy, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Pinto\nAge: 9\nGender: Male\nWeight: 530.0\nSymptoms: Lameness, Coughing, Loss of Appetite, Swollen Legs\nDuration: 7 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Charolais\nAge: 5\nGender: Female\nWeight: 620.0\nSymptoms: Lethargy, Coughing, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Lop\nAge: 1\nGender: Female\nWeight: 1.2\nSymptoms: Nasal Discharge, Loss of Appetite, Lethargy, Sneezing\nDuration: 2 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Myxomatosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 6\nGender: Male\nWeight: 90.0\nSymptoms: Swollen Joints, Loss of Appetite, Lethargy, Coughing\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Caseous Lymphadenitis"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 3\nGender: Female\nWeight: 70.0\nSymptoms: Fever, Vomiting, Diarrhea, Appetite Loss\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 5\nGender: Male\nWeight: 120.0\nSymptoms: Coughing, Nasal Discharge, Loss of Appetite, Lethargy\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Pit Bull\nAge: 4\nGender: Female\nWeight: 35.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Coughing\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 5\nGender: Male\nWeight: 5.0\nSymptoms: Eye Discharge, Nasal Discharge, Sneezing, Lethargy\nDuration: 4 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Mustang\nAge: 12\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Appetite Loss, Swollen Legs, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Laminitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Hereford\nAge: 7\nGender: Female\nWeight: 580.0\nSymptoms: Loss of Appetite, Fever, Coughing, Lethargy\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Holland Lop\nAge: 3\nGender: Male\nWeight: 1.3\nSymptoms: Nasal Discharge, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 38.6\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Syphilis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Border Leicester\nAge: 5\nGender: Male\nWeight: 90.0\nSymptoms: Lethargy, Nasal Discharge, Swollen Joints, Loss of Appetite\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Chlamydia in Sheep"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 6\nGender: Female\nWeight: 60.0\nSymptoms: Vomiting, Fever, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Wessex Saddleback\nAge: 3\nGender: Male\nWeight: 105.0\nSymptoms: Vomiting, Fever, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 84bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Suis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Cocker Spaniel\nAge: 5\nGender: Female\nWeight: 20.0\nSymptoms: Vomiting, Lethargy, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 123bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Scottish Fold\nAge: 4\nGender: Male\nWeight: 4.8\nSymptoms: Coughing, Loss of Appetite, Fever, Lethargy\nDuration: 5 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 147bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Chlamydia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 6\nGender: Female\nWeight: 500.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Coughing\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine West Nile Virus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 5\nGender: Female\nWeight: 500.0\nSymptoms: Coughing, Nasal Discharge, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Viral Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Angora\nAge: 2\nGender: Male\nWeight: 1.5\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 153bpm\nWhat is the most likely disease prediction?",
+        "response": "Myxomatosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: German Shepherd\nAge: 4\nGender: Female\nWeight: 45.0\nSymptoms: Lethargy, Loss of Appetite, Coughing, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 3\nGender: Male\nWeight: 7.5\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Diarrhea\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 9\nGender: Male\nWeight: 850.0\nSymptoms: Lameness, Coughing, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Rhinopneumonitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 5\nGender: Female\nWeight: 620.0\nSymptoms: Coughing, Fever, Loss of Appetite, Lethargy\nDuration: 7 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Syncytial Virus"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Spot\nAge: 2\nGender: Female\nWeight: 1.3\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Syphilis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Finnsheep\nAge: 4\nGender: Male\nWeight: 70.0\nSymptoms: Coughing, Lethargy, Loss of Appetite, Swollen Joints\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Saanen\nAge: 5\nGender: Female\nWeight: 65.0\nSymptoms: Vomiting, Fever, Diarrhea, Loss of Appetite\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Tamworth\nAge: 3\nGender: Male\nWeight: 100.0\nSymptoms: Coughing, Lethargy, Nasal Discharge, Loss of Appetite\nDuration: 4 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Epidemic Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 6\nGender: Male\nWeight: 25.0\nSymptoms: Lethargy, Loss of Appetite, Coughing, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Russian Blue\nAge: 3\nGender: Female\nWeight: 4.8\nSymptoms: Nasal Discharge, Coughing, Loss of Appetite, Lethargy\nDuration: 4 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Shetland Pony\nAge: 8\nGender: Female\nWeight: 300.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Guernsey\nAge: 7\nGender: Male\nWeight: 590.0\nSymptoms: Coughing, Lethargy, Loss of Appetite, Swollen Legs\nDuration: 6 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Rex\nAge: 1\nGender: Female\nWeight: 1.1\nSymptoms: Sneezing, Loss of Appetite, Fever, Nasal Discharge\nDuration: 2 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Myxomatosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Leicester Longwool\nAge: 6\nGender: Male\nWeight: 95.0\nSymptoms: Swollen Joints, Loss of Appetite, Coughing, Lethargy\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Chlamydia in Sheep"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nigerian Dwarf\nAge: 2\nGender: Female\nWeight: 55.0\nSymptoms: Vomiting, Fever, Loss of Appetite, Lethargy\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Large White\nAge: 6\nGender: Female\nWeight: 115.0\nSymptoms: Coughing, Nasal Discharge, Loss of Appetite, Lethargy\nDuration: 7 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 7\nGender: Male\nWeight: 33.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 118bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Burmese\nAge: 4\nGender: Male\nWeight: 4.3\nSymptoms: Nasal Discharge, Coughing, Loss of Appetite, Lethargy\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Welsh Pony\nAge: 5\nGender: Female\nWeight: 400.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Aberdeen Angus\nAge: 6\nGender: Female\nWeight: 620.0\nSymptoms: Coughing, Fever, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Male\nWeight: 1.2\nSymptoms: Sneezing, Loss of Appetite, Fever, Nasal Discharge\nDuration: 4 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 154bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Dorset\nAge: 3\nGender: Male\nWeight: 75.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot and Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Toggenburg\nAge: 5\nGender: Female\nWeight: 60.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 81bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 4\nGender: Male\nWeight: 95.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Nasal Discharge\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 88bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Reproductive and Respiratory Syndrome"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Bulldog\nAge: 5\nGender: Female\nWeight: 18.0\nSymptoms: Lethargy, Coughing, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 6\nGender: Male\nWeight: 5.5\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 149bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 8\nGender: Female\nWeight: 550.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Ayrshire\nAge: 4\nGender: Male\nWeight: 630.0\nSymptoms: Coughing, Lethargy, Loss of Appetite, Swollen Legs\nDuration: 6 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 4\nGender: Female\nWeight: 15.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 3\nGender: Male\nWeight: 5.0\nSymptoms: Nasal Discharge, Coughing, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 7\nGender: Female\nWeight: 500.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Protozoal Myeloencephalitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 5\nGender: Male\nWeight: 560.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Male\nWeight: 1.2\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 38.7\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 5\nGender: Female\nWeight: 90.0\nSymptoms: Coughing, Lethargy, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 72bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot and Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 6\nGender: Male\nWeight: 70.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Duroc\nAge: 4\nGender: Female\nWeight: 105.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Lethargy\nDuration: 3 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 3\nGender: Male\nWeight: 6.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 2 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 118bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Scottish Fold\nAge: 5\nGender: Female\nWeight: 4.7\nSymptoms: Nasal Discharge, Coughing, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Mustang\nAge: 8\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 7 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 87bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Simmental\nAge: 4\nGender: Male\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Syncytial Virus"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Lop\nAge: 1\nGender: Female\nWeight: 1.0\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 158bpm\nWhat is the most likely disease prediction?",
+        "response": "Myxomatosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Karakul\nAge: 5\nGender: Male\nWeight: 80.0\nSymptoms: Swollen Joints, Coughing, Loss of Appetite, Lethargy\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Angora\nAge: 6\nGender: Female\nWeight: 60.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 83bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 4\nGender: Male\nWeight: 100.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 87bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Epidemic Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Rottweiler\nAge: 5\nGender: Female\nWeight: 40.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 122bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Abyssinian\nAge: 3\nGender: Male\nWeight: 4.6\nSymptoms: Nasal Discharge, Coughing, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 142bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Tennessee Walking Horse\nAge: 6\nGender: Female\nWeight: 600.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Rhinopneumonitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Dexter\nAge: 3\nGender: Male\nWeight: 450.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 79bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Viral Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Holland Lop\nAge: 1\nGender: Male\nWeight: 1.0\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 153bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Syphilis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Corriedale\nAge: 4\nGender: Female\nWeight: 95.0\nSymptoms: Swollen Joints, Coughing, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Blue Tongue"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Kiko\nAge: 5\nGender: Male\nWeight: 72.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Hampshire\nAge: 3\nGender: Female\nWeight: 105.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Nasal Discharge\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 86bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 7\nGender: Male\nWeight: 30.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 6\nGender: Female\nWeight: 4.2\nSymptoms: Nasal Discharge, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Coronavirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Standardbred\nAge: 6\nGender: Male\nWeight: 650.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Charolais\nAge: 3\nGender: Male\nWeight: 700.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 3\nGender: Female\nWeight: 20.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 5\nGender: Male\nWeight: 8.5\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 3 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 7\nGender: Female\nWeight: 850.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 4\nGender: Male\nWeight: 700.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Dutch\nAge: 2\nGender: Male\nWeight: 1.8\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Viral Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Southdown\nAge: 6\nGender: Female\nWeight: 80.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 74bpm\nWhat is the most likely disease prediction?",
+        "response": "Contagious Ecthyma"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 4\nGender: Male\nWeight: 72.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 5\nGender: Female\nWeight: 110.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: German Shepherd\nAge: 4\nGender: Male\nWeight: 32.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Hepatitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Sphynx\nAge: 3\nGender: Female\nWeight: 5.0\nSymptoms: Nasal Discharge, Loss of Appetite, Coughing, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Rhinotracheitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Andalusian\nAge: 8\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 88bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Encephalomyelitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Guernsey\nAge: 5\nGender: Female\nWeight: 450.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Parainfluenza"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Angora\nAge: 3\nGender: Male\nWeight: 1.4\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 38.9\u00b0C\nHeart Rate: 148bpm\nWhat is the most likely disease prediction?",
+        "response": "Pasteurellosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Tunis\nAge: 4\nGender: Male\nWeight: 95.0\nSymptoms: Swollen Joints, Coughing, Loss of Appetite, Lethargy\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 76bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue Virus"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 6\nGender: Female\nWeight: 75.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Viral Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Large White\nAge: 4\nGender: Male\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 86bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Bulldog\nAge: 3\nGender: Female\nWeight: 25.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Russian Blue\nAge: 2\nGender: Male\nWeight: 6.0\nSymptoms: Nasal Discharge, Loss of Appetite, Coughing, Fever\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Asthma"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 6\nGender: Female\nWeight: 650.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 84bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza Virus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Red Poll\nAge: 4\nGender: Male\nWeight: 680.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Female\nWeight: 1.1\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 38.8\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Romney\nAge: 5\nGender: Female\nWeight: 90.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Maedi-Visna"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Alpine\nAge: 5\nGender: Male\nWeight: 80.0\nSymptoms: Vomiting, Diarrhea, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Caseous Lymphadenitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Pietrain\nAge: 4\nGender: Female\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Nasal Discharge\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 88bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Erysipelas"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 5\nGender: Male\nWeight: 25.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 3\nGender: Female\nWeight: 6.0\nSymptoms: Nasal Discharge, Loss of Appetite, Coughing, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Appaloosa\nAge: 9\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 6\nGender: Female\nWeight: 500.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Viral Diarrhea"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Lop\nAge: 3\nGender: Male\nWeight: 2.0\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 155bpm\nWhat is the most likely disease prediction?",
+        "response": "Myxomatosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Blackface\nAge: 4\nGender: Male\nWeight: 95.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Blue Tongue Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Saanen\nAge: 5\nGender: Female\nWeight: 85.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 6\nGender: Male\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 4\nGender: Female\nWeight: 5.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siberian\nAge: 7\nGender: Male\nWeight: 10.2\nSymptoms: Nasal Discharge, Loss of Appetite, Coughing, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 135bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Asthma"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 7\nGender: Female\nWeight: 800.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Ayrshire\nAge: 5\nGender: Male\nWeight: 720.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 4\nGender: Female\nWeight: 1.6\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Pasteurellosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 4\nGender: Male\nWeight: 85.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Contagious Abortion"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 6\nGender: Female\nWeight: 95.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Duroc\nAge: 3\nGender: Male\nWeight: 110.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Dysentery"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Boxer\nAge: 6\nGender: Female\nWeight: 30.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Abyssinian\nAge: 5\nGender: Male\nWeight: 4.5\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Morgan\nAge: 5\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Belted Galloway\nAge: 4\nGender: Female\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Dutch\nAge: 3\nGender: Male\nWeight: 2.0\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Cheviot\nAge: 3\nGender: Female\nWeight: 75.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot-and-Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Angora\nAge: 4\nGender: Male\nWeight: 90.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Large White\nAge: 5\nGender: Female\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Flu"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Yorkshire Terrier\nAge: 4\nGender: Male\nWeight: 8.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Heartworm Disease"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 6\nGender: Female\nWeight: 10.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 6\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Rottweiler\nAge: 7\nGender: Male\nWeight: 35.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 4\nGender: Female\nWeight: 7.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 10\nGender: Female\nWeight: 750.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Encephalomyelitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 8\nGender: Male\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 3\nGender: Male\nWeight: 1.8\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Viral Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Rambouillet\nAge: 5\nGender: Female\nWeight: 90.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 6\nGender: Male\nWeight: 100.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 4\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Fever"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 5\nGender: Male\nWeight: 40.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 3\nGender: Female\nWeight: 8.0\nSymptoms: Nasal Discharge, Loss of Appetite, Coughing, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Panleukopenia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 7\nGender: Male\nWeight: 450.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Protozoal Myeloencephalitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 6\nGender: Female\nWeight: 550.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Angora\nAge: 2\nGender: Male\nWeight: 1.9\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Ringworm"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 4\nGender: Male\nWeight: 110.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 77bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 7\nGender: Female\nWeight: 120.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot-and-Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Tamworth\nAge: 5\nGender: Male\nWeight: 150.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 92bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 4\nGender: Female\nWeight: 25.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siberian\nAge: 5\nGender: Male\nWeight: 11.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Pinto\nAge: 6\nGender: Male\nWeight: 600.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 88bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Ayrshire\nAge: 7\nGender: Female\nWeight: 550.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Rex\nAge: 2\nGender: Female\nWeight: 1.5\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Dorper\nAge: 4\nGender: Male\nWeight: 95.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 78bpm\nWhat is the most likely disease prediction?",
+        "response": "Contagious Ecthyma"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Saanen\nAge: 8\nGender: Female\nWeight: 110.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 6\nGender: Female\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 3\nGender: Male\nWeight: 6.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 135bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Burmese\nAge: 4\nGender: Female\nWeight: 7.5\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Chlamydiosis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Appaloosa\nAge: 8\nGender: Male\nWeight: 700.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 7 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 82bpm\nWhat is the most likely disease prediction?",
+        "response": "West Nile Virus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Guernsey\nAge: 5\nGender: Female\nWeight: 600.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Poodle\nAge: 3\nGender: Female\nWeight: 28.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Kennel Cough"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 4\nGender: Male\nWeight: 10.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 5\nGender: Female\nWeight: 550.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Charolais\nAge: 8\nGender: Male\nWeight: 700.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Holland Lop\nAge: 2\nGender: Male\nWeight: 1.5\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Pasteurellosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Blackface\nAge: 6\nGender: Male\nWeight: 95.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot-and-Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Kiko\nAge: 4\nGender: Female\nWeight: 90.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Large White\nAge: 3\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 4\nGender: Male\nWeight: 20.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 3\nGender: Female\nWeight: 7.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 8\nGender: Male\nWeight: 800.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Encephalomyelitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Simmental\nAge: 7\nGender: Female\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Lop\nAge: 1\nGender: Female\nWeight: 1.3\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Myxomatosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Texel\nAge: 5\nGender: Male\nWeight: 110.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Angora\nAge: 7\nGender: Female\nWeight: 100.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 5\nGender: Male\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Actinobacillus Pleuropneumonia"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Dachshund\nAge: 3\nGender: Female\nWeight: 12.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 4\nGender: Male\nWeight: 10.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Panleukopenia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 6\nGender: Male\nWeight: 500.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Protozoal Myeloencephalitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 6\nGender: Male\nWeight: 550.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Johne's Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Male\nWeight: 1.8\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Viral Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Rambouillet\nAge: 6\nGender: Female\nWeight: 90.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 7\nGender: Female\nWeight: 120.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot-and-Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Tamworth\nAge: 4\nGender: Female\nWeight: 150.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Erysipelas"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Bulldog\nAge: 5\nGender: Female\nWeight: 22.0\nSymptoms: Coughing, Lethargy, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Cough"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Quarter Horse\nAge: 7\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 8\nGender: Female\nWeight: 750.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 7 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: English Angora\nAge: 1\nGender: Female\nWeight: 2.0\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Cheviot\nAge: 4\nGender: Male\nWeight: 85.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Blue Tongue Virus"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Saanen\nAge: 2\nGender: Male\nWeight: 85.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis Virus"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Pietrain\nAge: 3\nGender: Female\nWeight: 135.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "African Swine Fever"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Shih Tzu\nAge: 4\nGender: Male\nWeight: 8.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Abyssinian\nAge: 2\nGender: Female\nWeight: 6.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Infectious Peritonitis"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Morgan\nAge: 9\nGender: Male\nWeight: 600.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "West Nile Virus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 5\nGender: Female\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 75bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Male\nWeight: 1.5\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Viral Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 6\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Toggenburg\nAge: 5\nGender: Female\nWeight: 75.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Pneumonia"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 6\nGender: Male\nWeight: 140.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Cocker Spaniel\nAge: 2\nGender: Female\nWeight: 10.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Ragdoll\nAge: 5\nGender: Male\nWeight: 8.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 145bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Leukemia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 7\nGender: Male\nWeight: 700.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Limousin\nAge: 6\nGender: Male\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease Complex"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Mini Rex\nAge: 1\nGender: Female\nWeight: 1.2\nSymptoms: Sneezing, Nasal Discharge, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Merino\nAge: 7\nGender: Male\nWeight: 90.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Alpine\nAge: 6\nGender: Male\nWeight: 110.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis Virus"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 4\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Erysipelas"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Rottweiler\nAge: 3\nGender: Female\nWeight: 30.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Bengal\nAge: 4\nGender: Male\nWeight: 7.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 135bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Immunodeficiency Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 5\nGender: Male\nWeight: 550.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 3\nGender: Female\nWeight: 600.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Dorset\nAge: 6\nGender: Male\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 7 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 2\nGender: Female\nWeight: 80.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Tamworth\nAge: 3\nGender: Male\nWeight: 160.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 105bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 6\nGender: Male\nWeight: 700.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 7 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Angus\nAge: 4\nGender: Female\nWeight: 650.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Himalayan\nAge: 2\nGender: Male\nWeight: 1.6\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 7\nGender: Male\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue Virus"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Alpine\nAge: 3\nGender: Female\nWeight: 75.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 5\nGender: Male\nWeight: 140.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "African Swine Fever"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Chihuahua\nAge: 2\nGender: Male\nWeight: 6.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 3 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 6\nGender: Male\nWeight: 9.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 7\nGender: Female\nWeight: 550.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 7 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Charolais\nAge: 8\nGender: Female\nWeight: 750.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Rabbit\nBreed: Dutch\nAge: 1\nGender: Female\nWeight: 1.4\nSymptoms: Sneezing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 3 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Rabbit Viral Hemorrhagic Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Hampshire\nAge: 6\nGender: Male\nWeight: 125.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 7 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 4\nGender: Male\nWeight: 80.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Large White\nAge: 6\nGender: Female\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Fever"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 2\nGender: Male\nWeight: 10.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Leptospirosis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 4\nGender: Female\nWeight: 7.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Asthma"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Percheron\nAge: 5\nGender: Male\nWeight: 680.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 105bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Laminitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 3\nGender: Male\nWeight: 700.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Mastitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Guernsey\nAge: 3\nGender: Male\nWeight: 580.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Dorset\nAge: 4\nGender: Male\nWeight: 125.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Saanen\nAge: 3\nGender: Female\nWeight: 75.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Landrace\nAge: 4\nGender: Male\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Flu"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Cheviot\nAge: 3\nGender: Female\nWeight: 110.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Boer\nAge: 5\nGender: Male\nWeight: 85.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Goat Pox"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Yorkshire\nAge: 2\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 105bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Epidemic Diarrhea Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Morgan\nAge: 4\nGender: Male\nWeight: 650.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 6 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Ayrshire\nAge: 3\nGender: Female\nWeight: 700.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Kiko\nAge: 4\nGender: Female\nWeight: 70.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Chester White\nAge: 3\nGender: Male\nWeight: 150.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 105bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Boxer\nAge: 3\nGender: Female\nWeight: 30.0\nSymptoms: Lethargy, Vomiting, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Infectious Hepatitis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 5\nGender: Male\nWeight: 8.0\nSymptoms: Coughing, Loss of Appetite, Nasal Discharge, Fever\nDuration: 5 days\nBody Temperature: 39.0\u00b0C\nHeart Rate: 135bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Panleukopenia Virus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 6\nGender: Female\nWeight: 650.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Metabolic Syndrome"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 2\nGender: Male\nWeight: 550.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Mastitis"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Simmental\nAge: 4\nGender: Female\nWeight: 700.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Suffolk\nAge: 3\nGender: Male\nWeight: 110.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Bluetongue"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Toggenburg\nAge: 2\nGender: Female\nWeight: 70.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Arthritis Encephalitis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Tamworth\nAge: 3\nGender: Male\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 105bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Dexter\nAge: 2\nGender: Male\nWeight: 500.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Bovine Tuberculosis"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Cheviot\nAge: 4\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Alpine\nAge: 3\nGender: Male\nWeight: 75.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Viral Arthritis"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Large White\nAge: 2\nGender: Female\nWeight: 120.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Porcine Circovirus Disease"
+    },
+    {
+        "prompt": "Animal Type: Goat\nBreed: Nubian\nAge: 4\nGender: Female\nWeight: 80.0\nSymptoms: Vomiting, Diarrhea, Lethargy, Fever\nDuration: 6 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 95bpm\nWhat is the most likely disease prediction?",
+        "response": "Caprine Respiratory Disease"
+    },
+    {
+        "prompt": "Animal Type: Pig\nBreed: Berkshire\nAge: 5\nGender: Male\nWeight: 145.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 4 days\nBody Temperature: 39.7\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Swine Fever"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Dorset\nAge: 5\nGender: Male\nWeight: 150.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Scrapie"
+    },
+    {
+        "prompt": "Animal Type: Sheep\nBreed: Southdown\nAge: 6\nGender: Male\nWeight: 130.0\nSymptoms: Coughing, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 80bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot-and-Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Golden Retriever\nAge: 5\nGender: Male\nWeight: 35.0\nSymptoms: Coughing, Lethargy, Loss of Appetite, Fever\nDuration: 4 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Labrador\nAge: 4\nGender: Male\nWeight: 30.0\nSymptoms: Vomiting, Loss of Appetite, Lethargy, Fever\nDuration: 5 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 100bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 3\nGender: Female\nWeight: 5.0\nSymptoms: Coughing, Sneezing, Nasal Discharge, Fever\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Feline Calicivirus"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Arabian\nAge: 5\nGender: Male\nWeight: 450.0\nSymptoms: Lameness, Loss of Appetite, Swollen Legs, Fever\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Infectious Anemia"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Clydesdale\nAge: 6\nGender: Male\nWeight: 700.0\nSymptoms: Lameness, Swollen Legs, Loss of Appetite, Fever\nDuration: 7 days\nBody Temperature: 39.4\u00b0C\nHeart Rate: 125bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Herpesvirus"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Labrador\nAge: 4\nGender: Male\nWeight: 25.0\nSymptoms: Fever, Lethargy, Appetite Loss, Vomiting\nDuration: 3 days\nBody Temperature: 39.5\u00b0C\nHeart Rate: 120bpm\nWhat is the most likely disease prediction?",
+        "response": "Parvovirus"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Siamese\nAge: 2\nGender: Female\nWeight: 4.5\nSymptoms: Coughing, Sneezing, Eye Discharge, Nasal Discharge\nDuration: 1 week\nBody Temperature: 38.9\u00b0C\nHeart Rate: 150bpm\nWhat is the most likely disease prediction?",
+        "response": "Upper Respiratory Infection"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Holstein\nAge: 3\nGender: Female\nWeight: 600.0\nSymptoms: Fever, Nasal Discharge, Labored Breathing, Coughing\nDuration: 5 days\nBody Temperature: 40.1\u00b0C\nHeart Rate: 90bpm\nWhat is the most likely disease prediction?",
+        "response": "Foot and Mouth Disease"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Beagle\nAge: 1\nGender: Male\nWeight: 10.0\nSymptoms: Diarrhea, Vomiting, Lethargy, Appetite Loss\nDuration: 2 days\nBody Temperature: 39.2\u00b0C\nHeart Rate: 130bpm\nWhat is the most likely disease prediction?",
+        "response": "Gastroenteritis"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Persian\nAge: 5\nGender: Male\nWeight: 3.8\nSymptoms: Lethargy, Appetite Loss, Skin Lesions, No\nDuration: 2 weeks\nBody Temperature: 38.7\u00b0C\nHeart Rate: 160bpm\nWhat is the most likely disease prediction?",
+        "response": "Fungal Infection"
+    },
+    {
+        "prompt": "Animal Type: Horse\nBreed: Thoroughbred\nAge: 6\nGender: Female\nWeight: 500.0\nSymptoms: Coughing, Labored Breathing, Nasal Discharge, Fever\nDuration: 10 days\nBody Temperature: 39.8\u00b0C\nHeart Rate: 85bpm\nWhat is the most likely disease prediction?",
+        "response": "Equine Influenza"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: German Shepherd\nAge: 3\nGender: Female\nWeight: 30.0\nSymptoms: Lameness, Fever, Skin Lesions, Lethargy\nDuration: 7 days\nBody Temperature: 39.3\u00b0C\nHeart Rate: 110bpm\nWhat is the most likely disease prediction?",
+        "response": "Lyme Disease"
+    },
+    {
+        "prompt": "Animal Type: Cat\nBreed: Maine Coon\nAge: 2\nGender: Male\nWeight: 6.0\nSymptoms: Vomiting, Appetite Loss, Lethargy, Diarrhea\nDuration: 4 days\nBody Temperature: 39.1\u00b0C\nHeart Rate: 140bpm\nWhat is the most likely disease prediction?",
+        "response": "Intestinal Parasites"
+    },
+    {
+        "prompt": "Animal Type: Dog\nBreed: Bulldog\nAge: 5\nGender: Male\nWeight: 23.0\nSymptoms: Labored Breathing, Coughing, Nasal Discharge, Appetite Loss\nDuration: 6 days\nBody Temperature: 40.0\u00b0C\nHeart Rate: 115bpm\nWhat is the most likely disease prediction?",
+        "response": "Canine Distemper"
+    },
+    {
+        "prompt": "Animal Type: Cow\nBreed: Jersey\nAge: 4\nGender: Female\nWeight: 580.0\nSymptoms: Lethargy, Decreased Milk Yield, Fever, No\nDuration: 8 days\nBody Temperature: 39.6\u00b0C\nHeart Rate: 70bpm\nWhat is the most likely disease prediction?",
+        "response": "Mastitis"
+    }
+]

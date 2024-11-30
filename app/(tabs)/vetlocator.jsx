@@ -4,7 +4,7 @@ import styles from '../../constants/styles'
 
 const VetLocator = () => {
   return (
-    <View style={styles.defaultContainer}>
+    <View style={styles.tempStyle}>
       <Text>VetLocator</Text>
     </View>
   )

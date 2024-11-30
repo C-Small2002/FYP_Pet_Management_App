@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View, Image, PixelRatio } from 'react-native'
+import { View, Image, PixelRatio } from 'react-native'
 import React from 'react'
-import { Tabs, Redirect } from 'expo-router'
+import { Tabs } from 'expo-router'
 
 import icons from '../../constants/icons'
 
@@ -20,7 +20,7 @@ const TabIcon = ({icon, color, name, focused,}) => {
 
 const TabsLayout = () => {
   return (
-    <>
+    
     <Tabs>
 
         <Tabs.Screen
@@ -104,7 +104,7 @@ const TabsLayout = () => {
         />
         
     </Tabs>
-    </>
+    
   )
 }
 

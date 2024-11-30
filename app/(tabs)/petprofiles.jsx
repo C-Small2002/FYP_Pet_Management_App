@@ -1,9 +1,10 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View, Image, FlatList } from 'react-native'
 import React, {useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import styles from '../../constants/styles'
 import PetDropdown from '../components/petdropdown'
 import { useStoreRootState } from 'expo-router/build/global-state/router-store'
+import images from '../../constants/images'
 
 
 const PetProfiles = () => {
@@ -26,7 +27,8 @@ const PetProfiles = () => {
       weight: '',
       height:'',
       chipnumber: '123456789',
-      medicalconditions: ['Cruciate Ligament Injury', 'Allergy to Wheat']
+      medicalconditions: ['Cruciate Ligament Injury', 'Allergy to Wheat'],
+      image: images.darcy
     },
     cat: {
       name: 'Tinky Winky',
@@ -56,8 +58,10 @@ const PetProfiles = () => {
 
       <PetDropdown data={petProfiles} onSelect={handlePetSelect}/>
 
-      <ScrollView >
+      <FlatList >
+        
         {selectedPetData && (
+
           <View style={styles.profileContainer}>
             <Text style={styles.header}>Basic Information</Text>
             <View style={styles.displayRow}>
@@ -90,19 +94,19 @@ const PetProfiles = () => {
         )}
 
         {selectedPetData && selectedPetData.medicalconditions.length > 0 && (
-          <>
-            <View style={styles.profileContainer}>
-              <Text style={styles.header}>Medical Conditions</Text>
-              {selectedPetData.medicalconditions.map((condition, index) => (
-                <View style={styles.displayRow}>
-                  <Text style={styles.label}>Condition {index+1}</Text>
-                  <Text style={styles.value}> { condition} </Text> 
-                </View>
-              ))}
-            </View>
-          </>
+          
+          <View style={styles.profileContainer}>
+            <Text style={styles.header}>Medical Conditions</Text>
+            {selectedPetData.medicalconditions.map((condition, index) => (
+              <View style={styles.displayRow}>
+                <Text style={styles.label}>Condition {index+1}</Text>
+                <Text style={styles.value}> {condition} </Text> 
+              </View>
+            ))}
+          </View>
+          
         )}
-      </ScrollView>
+      </FlatList>
     </SafeAreaView>
   )
 }

@@ -118,6 +118,53 @@ export default StyleSheet.create({
     fontSize: width * 0.05,
     fontWeight: 'bold',
     marginBottom: height *0.01
+  },
+
+  petImage:{
+    width: width *0.9,
+    height: height*0.3,
+    borderRadius: 15,
+    alignSelf:'center',
+    marginBottom: height *0.02
+  },
+
+  reminderItem: {
+    backgroundColor: COLOURS.backgroundWhite,
+    borderRadius: width *0.02,
+    marginBottom: height * 0.01,
+    padding: width *0.035,
+    elevation:3,
+    shadowColor: COLOURS.black,
+    shadowOpacity: 0.1,
+    shadowRadius: 4
+  },
+
+  reminderText: {
+    fontWeight: '500',
+    fontSize: width * 0.045
+  },
+
+  reminderTime:{
+    fontSize: width *0.035,
+    marginVertical: height *0.01
+  },
+
+  iconView:{
+    flexDirection:'row',
+    justifyContent:'flex-end',
+    gap: width *0.02
+  },
+
+  icon:{
+    width: width *0.06, 
+    height: height *0.06,
+    resizeMode: 'contain'
+  },
+
+  tempStyle: { //used to centre 
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 
 })  

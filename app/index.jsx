@@ -13,12 +13,6 @@ export default function App() {
 
     <View style={[styles.View, {paddingHorizontal: padding}]}>
 
-      <Image 
-        style={styles.Onboard }
-        source={images.onboard}
-        resizeMode="contain"
-      />
-
       <View>
         <Text>Welcome to Zoomies! The All in One Pet Management App.
 

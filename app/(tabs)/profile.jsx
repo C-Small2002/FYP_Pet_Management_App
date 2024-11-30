@@ -4,7 +4,7 @@ import styles from '../../constants/styles'
 
 const Profile = () => {
   return (
-    <View style={styles.defaultContainer}>
+    <View style={styles.tempStyle}>
       <Text>Profile</Text>
     </View>
   )

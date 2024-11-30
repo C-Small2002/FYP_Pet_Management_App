@@ -46,6 +46,7 @@ def chat():
         input,
         do_sample=True,
         top_k=10,
+        top_p=0.9,
         num_return_sequences=1,
         eos_token_id=tokenizer.eos_token_id,
         #truncation = True,
