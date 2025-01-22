@@ -5,6 +5,8 @@ import styles from '../../constants/styles'
 import PetDropdown from '../components/petdropdown'
 import { useStoreRootState } from 'expo-router/build/global-state/router-store'
 import images from '../../constants/images'
+import FloatingActionButton from '../components/floatingactionbutton'
+import icons from '../../constants/icons'
 
 
 const PetProfiles = () => {
@@ -54,59 +56,66 @@ const PetProfiles = () => {
   };
 
   return (
-    <SafeAreaView style={styles.defaultContainer}>
+    <SafeAreaView style={styles.background}>
+      <View style={styles.defaultContainer}>
+        <PetDropdown data={petProfiles} onSelect={handlePetSelect}/>
 
-      <PetDropdown data={petProfiles} onSelect={handlePetSelect}/>
-
-      <FlatList >
-        
-        {selectedPetData && (
-
-          <View style={styles.profileContainer}>
-            <Text style={styles.header}>Basic Information</Text>
-            <View style={styles.displayRow}>
-              <Text style={styles.label}>Name: </Text>
-              <Text style={styles.value}>{selectedPetData.name}</Text>
-            </View>
-            <View style={styles.displayRow}>
-              <Text style={styles.label}>Breed: </Text>
-              <Text style={styles.value}>{selectedPetData.breed}</Text>
-            </View>
-            <View style={styles.displayRow}>
-              <Text style={styles.label}>Age: </Text>
-              <Text style={styles.value}>{selectedPetData.age}</Text>
-            </View>
-            <View style={styles.displayRow}>
-              <Text style={styles.label}>Date Of Birth</Text>
-              <Text style={styles.value}>{selectedPetData.dob}</Text>
-            </View>
-            <View style={styles.displayRow}>
-              <Text style={styles.label}>Sex: </Text>
-              <Text style={styles.value}>{selectedPetData.sex}</Text>
-            </View>
-            <View style={styles.displayRow}>
-              <Text style={styles.label}>Chip Number: </Text>
-              <Text style={styles.value}>{selectedPetData.chipnumber}</Text>
-            </View>
-
-          </View>
-
-        )}
-
-        {selectedPetData && selectedPetData.medicalconditions.length > 0 && (
+        <ScrollView>
           
-          <View style={styles.profileContainer}>
-            <Text style={styles.header}>Medical Conditions</Text>
-            {selectedPetData.medicalconditions.map((condition, index) => (
+          {selectedPetData && (
+
+            <View style={styles.profileContainer}>
+              <Text style={styles.header}>Basic Information</Text>
               <View style={styles.displayRow}>
-                <Text style={styles.label}>Condition {index+1}</Text>
-                <Text style={styles.value}> {condition} </Text> 
+                <Text style={styles.label}>Name: </Text>
+                <Text style={styles.value}>{selectedPetData.name}</Text>
               </View>
-            ))}
-          </View>
-          
-        )}
-      </FlatList>
+              <View style={styles.displayRow}>
+                <Text style={styles.label}>Breed: </Text>
+                <Text style={styles.value}>{selectedPetData.breed}</Text>
+              </View>
+              <View style={styles.displayRow}>
+                <Text style={styles.label}>Age: </Text>
+                <Text style={styles.value}>{selectedPetData.age}</Text>
+              </View>
+              <View style={styles.displayRow}>
+                <Text style={styles.label}>Date Of Birth</Text>
+                <Text style={styles.value}>{selectedPetData.dob}</Text>
+              </View>
+              <View style={styles.displayRow}>
+                <Text style={styles.label}>Sex: </Text>
+                <Text style={styles.value}>{selectedPetData.sex}</Text>
+              </View>
+              <View style={styles.displayRow}>
+                <Text style={styles.label}>Chip Number: </Text>
+                <Text style={styles.value}>{selectedPetData.chipnumber}</Text>
+              </View>
+
+            </View>
+
+          )}
+
+          {selectedPetData && selectedPetData.medicalconditions.length > 0 && (
+            
+            <View style={styles.profileContainer}>
+              <Text style={styles.header}>Medical Conditions</Text>
+              {selectedPetData.medicalconditions.map((condition, index) => (
+                <View style={styles.displayRow}>
+                  <Text style={styles.label}>Condition {index+1}</Text>
+                  <Text style={styles.value}> {condition} </Text> 
+                </View>
+              ))}
+            </View>
+            
+          )}
+
+        </ScrollView>
+        <FloatingActionButton
+            icon={icons.plus}
+            position='fabBottomRight'
+            size='fabMedium'
+          />
+      </View>
     </SafeAreaView>
   )
 }

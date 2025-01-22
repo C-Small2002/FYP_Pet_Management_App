@@ -1,8 +1,9 @@
-import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image, Modal } from 'react-native'
 import React, {useState} from 'react'
 import styles from '../../constants/styles'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '../../constants/icons'
+import FloatingActionButton from '../components/floatingactionbutton'
 
 const Reminders = () => {
 
@@ -37,38 +38,52 @@ const Reminders = () => {
     setReminders((prev) => prev.filter((item) => item.id !== id))
   }
   return (
-    <SafeAreaView style={styles.defaultContainer}>
-      <FlatList
-        data={reminders}
-        keyExtractor={(items) => {items.id}}
-        renderItem={({item})=>( 
-          <View style={styles.reminderItem}>
+    <SafeAreaView style={styles.background}>
+      <View style={styles.defaultContainer}>
+        <FlatList
+          data={reminders}
+          keyExtractor={(items) => {items.id}}
+          renderItem={({item})=>( 
+            <View style={styles.reminderItem}>
 
-            <Text style={styles.reminderText}>{item.title}</Text>
-            <Text style={styles.reminderTime}>{item.date} at {item.time}</Text>
+              <Text style={styles.reminderText}>{item.title}</Text>
+              <Text style={styles.reminderTime}>{item.date} at {item.time}</Text>
 
-            <View style={styles.iconView}>
-              
-              <TouchableOpacity onPress={() => handleMarkComplete(item.id)}>
-                <Image 
-                  source={icons.circle_check} 
-                  style={[styles.icon, {tintColor: item.done ? 'green' : 'gray'}]} 
-                />
-              </TouchableOpacity>
+              <View style={styles.iconView}>
+                
+                <TouchableOpacity onPress={() => handleMarkComplete(item.id)}>
+                  <Image 
+                    source={icons.circle_check} 
+                    style={[styles.icon, {tintColor: item.done ? 'green' : 'gray'}]} 
+                  />
+                </TouchableOpacity>
 
-              <TouchableOpacity onPress={() => handleDelete(item.id)}>
-                <Image
-                  source={icons.bin}
-                  style = {styles.icon}
-                />
-              </TouchableOpacity>
+                <TouchableOpacity onPress={() => handleDelete(item.id)}>
+                  <Image
+                    source={icons.bin}
+                    style = {styles.icon}
+                  />
+                </TouchableOpacity>
+
+              </View>
 
             </View>
+          )}
+          ListEmptyComponent={<Text>No Reminders Yet!</Text>} 
+        />
 
-          </View>
-        )}
-        ListEmptyComponent={<Text>No Reminders Yet!</Text>} 
-      />
+        <FloatingActionButton
+          icon={icons.plus}
+          onPress={onPress}
+          position='fabBottomRight'
+          size='fabMedium'
+        />
+
+        <Modal>
+          
+        </Modal>
+
+      </View>
     </SafeAreaView>
   )
 }

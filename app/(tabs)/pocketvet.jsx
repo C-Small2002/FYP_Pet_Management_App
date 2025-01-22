@@ -28,7 +28,7 @@ const PocketVet = () => {
                                                                  
     try{ 
 
-      response = await axios.post('http://10.10.20.240:5000/chat', {message: input}); //sends the message to the flask hosting the LLM
+      response = await axios.post('http://10.10.21.29:5000/chat', {message: input}); //sends the message to the flask hosting the LLM
       console.log('Response Data',response.data)
       //adds messages from pocket vet to the messages array
       const pocketvetMessage = {text: response.data.response, from: 'pocketvet'};
@@ -49,29 +49,30 @@ const PocketVet = () => {
 
   
   return (
-    <SafeAreaView style={styles.defaultContainer}>
+    <SafeAreaView style={styles.background}>
+      <View style={styles.defaultContainer}>
+        <PetDropdown data={petProfiles} ></PetDropdown>
 
-      <PetDropdown data={petProfiles} ></PetDropdown>
+        <ScrollView style={styles.vetContainer} contentContainerStyle={styles.scrollContent}> 
+          {messages.map((msg, index) => (
+            <Text key={index} style={msg.from === 'user' ? styles.userText: styles.vetText}>
+              {msg.text}
+            </Text>
+          ))}
+        </ScrollView>
 
-      <ScrollView style={styles.vetContainer} contentContainerStyle={styles.scrollContent}> 
-        {messages.map((msg, index) => (
-          <Text key={index} style={msg.from === 'user' ? styles.userText: styles.vetText}>
-            {msg.text}
-          </Text>
-        ))}
-      </ScrollView>
-
-      <View style={styles.inputView}>
-        <TextInput 
-          style={styles.input}
-          value={input}
-          onChangeText={setInput}
-          onSubmitEditing={sendMessage} //submits when enter is pressed
-          placeholder='Type Something...'
-        />
-
+        
       </View>
+      <View style={styles.inputView}>
+          <TextInput 
+            style={styles.input}
+            value={input}
+            onChangeText={setInput}
+            onSubmitEditing={sendMessage} //submits when enter is pressed
+            placeholder='Type Something...'
+          />
 
+        </View>
       </SafeAreaView>
   )
 }

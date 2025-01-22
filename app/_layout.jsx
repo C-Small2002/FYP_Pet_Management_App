@@ -7,6 +7,7 @@ const RootLayout = () => {
     <Stack> //Creates a stack of screens allowing the user to navigate forward and backwards by pushing and popping screens on and off the stack
         <Stack.Screen name="index" options={{headerShown: false}}/> 
         <Stack.Screen name="(tabs)" options ={{headerShown: false}}/>
+        <Stack.Screen name = "(auth)" options = {{headerShown: false}}/>
     </Stack>
   )
 }

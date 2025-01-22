@@ -17,6 +17,18 @@ export default function App() {
         <Text>Welcome to Zoomies! The All in One Pet Management App.
 
           <Link href={"./petprofiles"} style={{color: 'blue'}}>Get Started Today</Link>
+          
+        </Text>
+
+        <Text>
+
+          <Link href={"./login"} style={{color: 'blue'}}>Login</Link>
+
+        </Text>
+
+        <Text>
+
+          <Link href={"./register"} style={{color: 'blue'}}>Register</Link>
 
         </Text>
 
