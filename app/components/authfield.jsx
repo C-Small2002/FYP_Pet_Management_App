@@ -22,12 +22,23 @@ const AuthField = ({title, value, placeholder, handleTextChanged, otherstyles, .
           onChangeText={handleTextChanged}
           secureTextEntry={(title === "Password" || title === "Confirm Password")&& !showPassword}
           {...props}
+          editable={title === "Date" ? false : true}
         />
 
         {(title === "Password" || title === "Confirm Password") && (
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Image
               source={!showPassword ? icons.eye : icons.eye_hidden}
+              style={styles.formIcon}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        )}
+
+        {(title === "Medical Condition" || title === "Vaccine") && (
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+            <Image
+              source={icons.bin}
               style={styles.formIcon}
               resizeMode="contain"
             />

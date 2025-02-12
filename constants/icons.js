@@ -8,6 +8,7 @@ import circle_check from "../assets/icons/check-circle-icon.png"
 import eye from "../assets/icons/eye-gray.png"
 import eye_hidden from "../assets/icons/eye-hidden-gray.png"
 import plus from "../assets/icons/plus.png"
+import edit from "../assets/icons/edit.png"
 
 export default{
   paw,
@@ -19,5 +20,6 @@ export default{
   circle_check,
   eye,
   eye_hidden,
-  plus
+  plus,
+  edit
 };

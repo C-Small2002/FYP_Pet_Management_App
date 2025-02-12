@@ -6,13 +6,35 @@ import styles from '../../constants/styles'
 import icons from '../../constants/icons'
 import images from '../../constants/images'
 import AuthField from '../components/authfield'
+import { Link, router } from 'expo-router'
+import { db, signInWithEmailAndPassword, auth } from '../../firebaseconfig'
+import { collection, query, where, getDocs } from 'firebase/firestore'
+import { Alert } from 'react-native'
 
 const Login = () => {
 
-  const [form, setForm] = useState({
-    email: '',
-    password: ''
-  })
+  const [form, setForm] = useState({ email: '', password: '' })
+  const [submitting , setSubmitting] = useState(false)
+  
+  const handleLogin = async () => {
+
+    setSubmitting(true);
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, form.email, form.password)
+      const user = userCredential.user;
+
+      Alert.alert('Login Successful', `Welcome ${user.firstname}!`);
+      router.push('../../petprofiles');
+
+    }
+
+    catch (error) {
+      Alert.alert('Login Failed', error.message);
+    }
+    
+  }
+
 
   return (
     <SafeAreaView style={styles.background}>
@@ -48,10 +70,14 @@ const Login = () => {
 
           <CustButton
             title='Log In'
+            handlePress={handleLogin}
+            isLoading={submitting}
           />
 
           <CustButton
             title='Register'
+            handlePress={() => router.push('./register')}
+            isLoading={submitting}
           />
 
         </View>

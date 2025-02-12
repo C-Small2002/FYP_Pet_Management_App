@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import DropDownPicker from 'react-native-dropdown-picker'
 import styles from '../../constants/styles'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -16,6 +16,10 @@ const PetDropdown = ({data, onSelect}) => {
         }
     };
 
+    //Added so that dropdown will update when the data being passed to it changes
+    useEffect(()=> {
+      setItems(data);
+    }, [data]);
 
   return (
     <SafeAreaView style={[styles.dropdownContainer, open && {zIndex:1000}]}>

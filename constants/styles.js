@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
+import { Directions } from "react-native-gesture-handler";
 
 const COLOURS = {
   primary: '#4287f5',
@@ -80,13 +81,15 @@ export default StyleSheet.create({
 
 	dropdownSelector:{
 		borderWidth:1,
-		borderColor: COLOURS.primary
+		borderColor: COLOURS.primary,
+    elevation: 5
 	},
 
 	dropdownMenu: {
 		borderWidth: 1,
 		borderColor: COLOURS.primary,
 		backgroundColor:COLOURS.accentWhite,
+    elevation: 5
 	},
 
   profileContainer:{
@@ -153,12 +156,15 @@ export default StyleSheet.create({
     borderRadius: width *0.02,
     borderWidth: 2,
     borderColor: COLOURS.accentGray,
-    marginBottom: height * 0.01,
+    marginTop: height *0.02,
     padding: width *0.035,
     elevation:3,
     shadowColor: COLOURS.black,
     shadowOpacity: 0.1,
-    shadowRadius: 4
+    shadowRadius: 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: width *0.02  
   },
 
   reminderText: {
@@ -169,6 +175,10 @@ export default StyleSheet.create({
   reminderTime:{
     fontSize: width *0.035,
     marginVertical: height *0.01
+  },
+
+  reminderTextContainer: {
+    flex: 1
   },
 
   iconView:{
@@ -282,10 +292,79 @@ export default StyleSheet.create({
     right: width *0.05
   },
 
+  fabBottomLeft: {
+    bottom: height *0.05,
+    left: width *0.05
+  },
+
   fabMedium: {
     width: width *0.15,
     height: width *0.15,
     borderRadius: (width * 0.2) /2
   },
+
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.2)'
+  },
+
+  modalContent: {
+    width: '80%',
+    backgroundColor: COLOURS.backgroundWhite,
+    padding: 10,
+    alignItems: 'center',
+    elevation: 5,
+    alignItems: 'center',
+    shadowColor: COLOURS.black,
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    shadowOffset: {width: 0, height: 2},
+    borderRadius: 10,
+    borderWidth: 3,
+    borderColor: COLOURS.accentGray
+  },
+
+  modalSubContainer: {
+    flex: 1,
+    flexDirection:'row',
+    alignItems: 'center',
+  },
+
+  modalSubContents: {
+    marginBottom: height*0.03,
+    width: "100%",
+    height: height*0.08,
+    paddingHorizontal: width *0.04,
+    borderRadius: height*0.02,
+    borderWidth: 2,
+    borderColor: COLOURS.primary,
+    flexDirection: "row",
+    alignItems: "center"
+  },
+
+  radioGroupContainer: {
+    marginVertical: height *0.015,
+    alignItems: 'flex-start',
+    borderColor: COLOURS.primary
+  },
+
+  radioButtonContainer: {
+    marginBottom: height * 0.007 ,
+  },
+
+  radioButton: {
+    borderWidth: 2,
+    borderColor: COLOURS.secondary,
+    backgroundColor: '#f5f5f5',
+    padding: height *0.01,
+    borderRadius: 5
+  },
+
+  radioLabel: {
+    fontSize: width*0.04,
+    color: COLOURS.black
+  }
 
 })  
