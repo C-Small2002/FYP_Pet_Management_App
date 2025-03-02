@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image, Modal, Switch, Pressable, Platform, TextInput } from 'react-native'
+import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image, Modal, Switch, Pressable, Platform, TextInput, Alert } from 'react-native'
 import React, {useEffect, useRef, useState} from 'react'
 import styles from '../../constants/styles'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -7,9 +7,10 @@ import FloatingActionButton from '../components/floatingactionbutton'
 import CustButton from '../components/custbutton'
 import AuthField from '../components/authfield'
 import { auth, db } from '../../firebaseconfig'
-import { addDoc, collection, deleteDoc, onSnapshot, query, where , doc, getDoc, updateDoc} from 'firebase/firestore'
+import { addDoc, collection, deleteDoc, onSnapshot, query, where , doc, getDoc, updateDoc, foreach, Timestamp} from 'firebase/firestore'
 import { RadioGroup } from 'react-native-radio-buttons-group'
 import RNDateTimePicker from '@react-native-community/datetimepicker'
+import { scheduleReminder } from '../../notificationservice'
 
 
 const Reminders = () => {
@@ -81,7 +82,21 @@ const Reminders = () => {
             const remindersList = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}));
             setReminders(remindersList);
             console.log(remindersList);
+
+            //Schedule local notification - will work for when app is open - need to set up cloud function for when app is killed
+            remindersList.forEach((reminder) =>{
+              if (!reminder.done) {
+                const reminderDateTime = reminder.reminderDateTime.toDate();
+                console.log(reminderDateTime);
+                if (reminderDateTime > new Date()){
+                  scheduleReminder(reminder.title, `Reminder set for ${reminder.time}`, reminderDateTime);
+                }
+              }
+            });
+
           });
+
+
           return () => getAllReminders();
       } 
       catch (error) {
@@ -140,12 +155,36 @@ const Reminders = () => {
         if (!familyId) {                  
           throw new Error('User is not linked to a family');
         }
+
+        //selectedDate, selectedTime and reminderDateTime intend to solve issue where date being passed into schedule was NaN value
+        //These allow it to be formatted in the way expected by expo notifications
+        const selectedDate = new Date(date);
+        const selectedTime = new Date(time);
+
+        //Formats into ISO time with the 0,0 being the seconds
+        const reminderDateTime = new Date(
+          selectedDate.getFullYear(),
+          selectedDate.getMonth(),
+          selectedDate.getDate(),
+          selectedTime.getHours(),
+          selectedTime.getMinutes(),
+          0,
+          0
+        );
+
+        if(reminderDateTime <= new Date()){
+          Alert.alert("Cancelling Reminder", "Reminder Time Must Be In The Future");
+          return;
+        }
+
+
       
         await addDoc(collection(db,'reminders'), {
           fid: familyId,
           title: form.title,
-          date: form.date,
-          time: form.time,
+          date: form.date, //For UI display purposes
+          time: form.time, //For UI display purposes
+          reminderDateTime: Timestamp.fromDate(reminderDateTime), //For scheduling
           recurring: recurring,
           recurrence: recurring ?  form.recurrence : null,
           done: false
@@ -220,7 +259,7 @@ const Reminders = () => {
         <Modal
           visible={isModalVisible}
           transparent={true}
-          animationType='slide'
+          animationType='fade'
           onRequestClose={() => setIsModalVisible(false)}
         >
 

@@ -10,7 +10,8 @@ import icons from '../../constants/icons'
 import AuthField from '../components/authfield'
 import CustButton from '../components/custbutton'
 import { auth, db } from '../../firebaseconfig'
-import { addDoc, collection, doc, getDoc, getDocs, onSnapshot, query, updateDoc, where } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, getDocs, setDoc, onSnapshot, query, updateDoc, where } from 'firebase/firestore'
+import { setUpNotificationListener, registerForPushNotifications } from '../../notificationservice'
 
 
 const PetProfiles = () => {
@@ -20,6 +21,7 @@ const PetProfiles = () => {
   const [petProfiles, setPetProfiles] = useState([]); //To be used to dynamically load dropdown options
   const [petData, setPetData] = useState({}); //To be used to dynamically load all data
   const [isEditMode, setIsEditMode] = useState(false); //Used for dynamic rendering in modal 
+  const [notificationsSet, setNotificationsSet] = useState(false);
   const [addForm, setAddForm] = useState({
     name: '',
     dob: '',
@@ -47,13 +49,40 @@ const PetProfiles = () => {
   })
   const [editFormBackup, setEditFormBackup] = useState(null); //Stores the original state of the data so that if user cancels their edit, original stae will be restored if they go back into the edit modal
 
+  //This is being called on this page as it is the page a user is redirected to after first registering for push notifications
+  useEffect (() =>{
+
+      const setupNotifications = async () => {
+
+        try {
+          const token = await registerForPushNotifications();
+          if (token && auth.currentUser){
+            await setDoc(doc(db, 'user', auth.currentUser.uid), {pushToken: token}, {merge: true});
+         }
+
+         setNotificationsSet(true); //This will ensure that the fetchpetdetials useeffect wont run at the same time which causes 
+                                    //an issue where firebase is updating the doc while the app is trying the fetch the familyID, preventing details from being fetched
+
+        } catch (error) {
+          Alert.alert("Notifications not working", error.message);      
+        }
+        
+      };
+  
+      setupNotifications();
+      setUpNotificationListener();
+  
+    }, []);
+
   useEffect(() => {
 
     const fetchPetDetails = async () => {
       try {
         
+        if(!notificationsSet) return; //See setUpNotifications for reason
+        //console.log("Entered useEffect for fetch");
         const user = auth.currentUser; //gets the current user
-
+        console.log(user); //NEVER REMOVE EVERYTHING BREAKS
         if (!user){
           throw new Error('No user logged in');
         }
@@ -100,13 +129,14 @@ const PetProfiles = () => {
     console.log(petData);
     console.log(petProfiles);
 
-  }, [setIsEditMode]); //[] controls when the useEffect runs - only runs on mount - onSnapshot reloads data when a change occurs in firebase
+  }, [notificationsSet]); //[] controls when the useEffect runs - runs on mount and when notificationsSet is true - this prevents issue descirbed above
 
   const handlePetSelect = (selectedPet) => {
     console.log(selectedPetData)
     if (selectedPet && petData[selectedPet]){
-      setSelectedPetData(petData[selectedPet])
-      setEditForm(petData[selectedPet]) 
+      setSelectedPetData(petData[selectedPet]);
+      setEditForm({...petData[selectedPet], id:selectedPet});
+      console.log(editForm.id)
     }
     else{
       setSelectedPetData(null)
@@ -139,13 +169,11 @@ const PetProfiles = () => {
   };
 
   const updateDyField = (field, index, value) => {
-    const updateField = [...form[field]]
-    updateField[index] = value
     if (isEditMode){
-      setEditForm((prevForm) => ({...prevForm, [field]: updateField}));
+      setEditForm((prevForm) => ({...prevForm, [field]: prevForm[field].map((item, i) => (i ===index ? value :item))}));
     }
     else {
-      setAddForm((prevForm) => ({...prevForm, [field]: updateField}));
+      setAddForm((prevForm) => ({...prevForm, [field]: prevForm[field].map((item, i) => (i ===index ? value :item))}));
     }
   };
 
@@ -211,6 +239,7 @@ const PetProfiles = () => {
     }
     catch (error) {
       Alert.alert("Error", error.message);
+      console.error(error)
     }
   }
 
@@ -315,7 +344,8 @@ const PetProfiles = () => {
         <Modal
           visible={isModalVisible}
           transparent={true}
-          animationType='slide'
+          animationType='fade'
+          key={isEditMode ? 'editMode' : 'addMode'}
           onRequestClose={() => setIsModalVisible(false)}
         >
           <ScrollView>
@@ -342,6 +372,13 @@ const PetProfiles = () => {
                   placeholder='Breed'
                   value={!isEditMode ? addForm.breed : editForm.breed}
                   handleTextChanged={!isEditMode ? (val) => setAddForm({...addForm, breed: val}) : (val) => setEditForm({...editForm, breed: val})}
+                />
+
+                <AuthField
+                  title='Sex'
+                  placeholder='Male/Female'
+                  value={!isEditMode ? addForm.name : editForm.name}
+                  handleTextChanged={!isEditMode ?(val) => setAddForm({...addForm, sex: val}) : (val) => setEditForm({...editForm, sex: val})}
                 />
 
                 <AuthField
@@ -381,7 +418,7 @@ const PetProfiles = () => {
                         title='Medical Condtion'
                         value={condition} 
                         style={styles.formInput}
-                        handleTextChanged={(val) => updateDyField('medicalconditions', index, val)}
+                        onChangeText={(val) => updateDyField('medicalconditions', index, val)}
                       />
                       <TouchableOpacity 
                         onPress={() => removeDyField('medicalconditions', index)}
@@ -404,7 +441,7 @@ const PetProfiles = () => {
                         title='Vaccines'
                         value={condition} 
                         style={styles.formInput}
-                        handleTextChanged={(val) => updateDyField('vaccines', index, val)}
+                        onChangeText={(val) => updateDyField('vaccines', index, val)}
                       />
                       <TouchableOpacity 
                         onPress={() => removeDyField('vaccines', index)}

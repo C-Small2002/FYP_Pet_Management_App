@@ -1,5 +1,6 @@
-import * as Notifications from 'expo-notifications'
-import { Platform } from 'react-native'
+import * as Notifications from 'expo-notifications';
+import { Alert, Platform } from 'react-native';
+import Constants from 'expo-constants';
 
 Notifications.setNotificationHandler({
     handleNotification: async () => ({
@@ -10,22 +11,83 @@ Notifications.setNotificationHandler({
 });
 
 export const registerForPushNotifications = async () => {
-    const {status} = await Notifications.requestPermissionsAsync();
-    if (status !== 'granted') {
-        alert('You need to enable push notifications in your settings');
+    let token;
+
+    if(Platform.OS === 'android'){
+        await Notifications.setNotificationChannelAsync('default', {
+            name: 'Default Channel',
+            importance: Notifications.AndroidImportance.MAX,
+            vibrationPattern: [0,250,250,250],
+            lightColor: '#FF231F7C'
+        });
+    }
+
+    const {status: existingStatus} = await Notifications.getPermissionsAsync();
+
+    let finalStatus = existingStatus;
+
+    if(existingStatus !== 'granted'){
+        const {status} = await Notifications.requestPermissionsAsync();
+        finalStatus = status
+    }
+
+    if(finalStatus !== 'granted'){
+        Alert.alert('Push Notifications are disabled. Please enable them in your settings.');
         return null;
     }
 
-    const token = (await Notifications.getExpoPushTokenAsync()).data;
+    try {
+        token = (await Notifications.getExpoPushTokenAsync()).data;
+        console.log('Expo Push Token:', token);
+        console.log('Expo ProjectID:', Constants.expoConfig.extra.eas.projectId || 'N/A');
+    } 
+    catch (error) {
+        console.error('Error getting push token', error);
+    }
+
     return token;
+
 };
 
 export const scheduleReminder = async (title, message, reminderDate) => {
-    await Notifications.scheduleNotificationAsync({
-        content: {
-            title: title,
-            body: message,
-            sound: true
+    
+    try {
+
+        const triggerTime = new Date(reminderDate);
+
+        if(triggerTime <= new Date()){
+            console.warn('Attempted to schedule a reminder in the past. Skipping.');
+            return;
         }
-    })
+
+        await Notifications.scheduleNotificationAsync({
+            content: {
+                title: title,
+                body: message,
+                sound: true
+            },
+            trigger: {date: triggerTime},
+        });
+
+        console.log('Scheduled Reminder:', title, 'at', triggerTime);
+
+    } 
+    catch (error) {
+        console.error('Error Scheduling Reminder:',error);
+    }
+    
 };
+
+export const setUpNotificationListener = () => {
+    Notifications.addNotificationReceivedListener(notification => {
+        console.log("Received ", notification);
+        Alert.alert(`New Reminder: ${notification.request.content.title}`);
+    });
+
+    Notifications.addNotificationResponseReceivedListener(response => {
+        console.log("Interacted with Notification", response);
+    });
+
+};
+
+

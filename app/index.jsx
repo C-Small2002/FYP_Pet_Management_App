@@ -3,10 +3,15 @@ import { ScrollView, StyleSheet, Text, View, PixelRatio, Image } from 'react-nat
 import { Link } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '../constants/images';
+import { useEffect } from 'react';
+import { registerForPushNotifications, setUpNotificationListener } from '../notificationservice';
+import { auth, db } from '../firebaseconfig';
+import { doc, setDoc } from 'firebase/firestore';
 
 const padding = PixelRatio.get() * 4;
 
 export default function App() {
+
   return (
    <SafeAreaView style={styles.SafeAreaView}>
     <ScrollView contentContainerStyle={{height: '100%'}}>
