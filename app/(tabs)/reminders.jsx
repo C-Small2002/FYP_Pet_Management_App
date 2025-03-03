@@ -187,7 +187,8 @@ const Reminders = () => {
           reminderDateTime: Timestamp.fromDate(reminderDateTime), //For scheduling
           recurring: recurring,
           recurrence: recurring ?  form.recurrence : null,
-          done: false
+          done: false,
+          notified: false,
         });
   
         setForm({title: '', date: '', time: '', recurrence: ''});
