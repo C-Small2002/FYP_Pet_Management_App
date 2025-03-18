@@ -28,7 +28,7 @@ const PocketVet = () => {
                                                                  
     try{ 
 
-      response = await axios.post('http://10.10.21.29:5000/chat', {message: input}); //sends the message to the flask hosting the LLM
+      response = await axios.post('http://192.168.56.1:5000/chat', {message: input}); //sends the message to the flask hosting the LLM
       console.log('Response Data',response.data)
       //adds messages from pocket vet to the messages array
       const pocketvetMessage = {text: response.data.response, from: 'pocketvet'};

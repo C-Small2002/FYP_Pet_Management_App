@@ -12,20 +12,39 @@ exports.sendReminderNotification = functions
     .timeZone("Europe/Dublin")
     .onRun(async (context) =>{
         
-        const currentTime = new Date();
+        console.log("Checking for Reminders...")
+        const timeWindow = admin.firestore.Timestamp.fromDate(new Date(Date.now() - 5 * 60 * 1000));
+        console.log("Current Time is: ",timeWindow);
+
+        const allRemindersSnapshot = await db.collection("reminders").get();
+
+        console.log(`Total Reminders in Firestore: ${allRemindersSnapshot.size}`);
+        
+        allRemindersSnapshot.forEach(doc => {
+            const data = doc.data();
+            console.log(`Reminder: ${data.title}`);
+            console.log("reminderDateTime:", data.reminderDateTime);
+            console.log("reminderDateTime (as Date):", data.reminderDateTime?.toDate());
+            console.log("notified:", data.notified);
+        });
+
         const reminderSnapshot = await db.collection("reminders")
-            .where("remindersDateTime", "<=", admin.firestore.Timestamp.fromDate(currentTime)) //Gets due reminders
+            .where("reminderDateTime", "<=", timeWindow) //Gets due reminders
             .where("notified", "==", false) //Ensures the notification hasnt been sent
             .get();
 
         if(reminderSnapshot.empty){
+            console.log("No Due Reminders")
             return null; //if theres no reminders, safely exits
         }
+
+        console.log(`Found ${reminderSnapshot.size} due reminders.`)
 
         let notificationsSent = 0;
         for (const doc of reminderSnapshot.docs) { //not using foreach here because it causes issues with await - sequneces dont finish sequentially
 
             const reminderData = doc.data();
+            console.log(`Sending Reminder for ${reminderData.title}`)
 
             if(reminderData.notified){
                 console.log("Notifications for this reminder have already been sent");
@@ -39,8 +58,8 @@ exports.sendReminderNotification = functions
             const tokens = [];
             userSnapshot.forEach((userDoc) => {
                 const userData = userDoc.data();
-                if(userData.expoPushToken){
-                    tokens.push(userData.expoPushToken);
+                if(userData.pushToken){
+                    tokens.push(userData.pushToken);
                 }
             });
 
@@ -110,8 +129,8 @@ exports.sendReminderCompleted = functions
         const tokens = [];
         familySnapshot.forEach((doc) => {
             const familyMember = doc.data();
-            if (familyMember.expoPushToken && familyMember.uid !== newData.completedBy){
-                tokens.push(familyMember.expoPushToken);
+            if (familyMember.pushToken && familyMember.uid !== newData.completedBy){
+                tokens.push(familyMember.pushToken);
             }
         });
 
