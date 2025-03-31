@@ -318,7 +318,7 @@ const PetProfiles = () => {
             </View>
             
           )}
-
+          <View style={styles.fabBuffer}/>
         </ScrollView>
 
         <FloatingActionButton

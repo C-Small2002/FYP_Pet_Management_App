@@ -25,7 +25,7 @@ const Login = () => {
       const user = userCredential.user;
 
       Alert.alert('Login Successful', `Welcome ${user.firstname}!`);
-      router.push('../../petprofiles');
+      router.replace('../../petprofiles');
 
     }
 

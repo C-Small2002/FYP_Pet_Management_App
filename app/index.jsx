@@ -7,74 +7,49 @@ import { useEffect } from 'react';
 import { registerForPushNotifications, setUpNotificationListener } from '../notificationservice';
 import { auth, db } from '../firebaseconfig';
 import { doc, setDoc } from 'firebase/firestore';
-
-const padding = PixelRatio.get() * 4;
+import { onAuthStateChanged } from 'firebase/auth';
+import { router } from 'expo-router';
+import styles from '../constants/styles';
+import CustButton from './components/custbutton';
 
 export default function App() {
 
+  useEffect(() => {
+    const checkLoggedIn = onAuthStateChanged(auth, (user) => {
+      if (user){
+        router.replace('/petprofiles');
+      }
+    });
+
+    return () => checkLoggedIn(); 
+
+  }, []);
+
   return (
-   <SafeAreaView style={styles.SafeAreaView}>
-    <ScrollView contentContainerStyle={{height: '100%'}}>
+    <SafeAreaView style={styles.onboardContainer}>
+      <ScrollView contentContainerStyle={styles.onboardScroll}>
 
-    <View style={[styles.View, {paddingHorizontal: padding}]}>
+        <View style={styles.onboardContent}>
 
-      <View>
-        <Text>Welcome to Zoomies! The All in One Pet Management App.
+          <Image source={images.logo_text} style={styles.logo} resizeMode='contain'/>
 
-          <Link href={"./petprofiles"} style={{color: 'blue'}}>Get Started Today</Link>
-          
-        </Text>
+          <Text style={styles.onboardHeader}>Welcome to Zoomies</Text>
+          <Text style={styles.onboardSubtitle}>The All-In-one Pet Management App</Text>
 
-        <Text>
+          <CustButton
+            title='Log In'
+            handlePress={() => router.push('./login')}
+          />
 
-          <Link href={"./login"} style={{color: 'blue'}}>Login</Link>
+          <CustButton
+            title='Register'
+            handlePress={() => router.push('./register')}
+            
+          />
 
-        </Text>
-
-        <Text>
-
-          <Link href={"./register"} style={{color: 'blue'}}>Register</Link>
-
-        </Text>
-
-      </View>
-    </View>
-
-    </ScrollView>
-   </SafeAreaView>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  SafeAreaView:{
-    backgroundColor:'#CAF0F8'
-  },
-
-  View:{
-    justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    alignItems: 'center'
-  },
-
-  Onboard:{
-    maxWidth: 380,
-    width: '100%',
-    height: 380
-  },
-
-  Text:{
-    justifyContent: 'center',
-    alignItems:'center',
-    textAlign:'center',
-    fontSize: 24
-  }
-
-});

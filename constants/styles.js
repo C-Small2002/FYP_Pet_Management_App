@@ -9,8 +9,10 @@ const COLOURS = {
 	accentBlue: '#E8F1FF',
 	backgroundGray: '#F2F2F2',
   backgroundWhite: '#F9F9F9',
-  accentGray: '#ddd'
-}
+  accentGray: '#ddd',
+  logoutRed: '#f54242',
+  secondaryRed: '#be3030'
+} 
 
 const {width, height} = Dimensions.get('window'); //gets the width and height of the devices screen
 
@@ -66,12 +68,12 @@ export default StyleSheet.create({
 
   vetContainer:{
     flex:1,
-    paddingTop: height*0.03
+    paddingTop: height*0.03,
   },
 
   scrollContent:{
     justifyContent:'flex-end',
-    paddingBottom: height *0.02
+    paddingBottom: height *0.03
   },
 
 	dropdownContainer:{
@@ -105,7 +107,7 @@ export default StyleSheet.create({
     shadowOffset: {width: 0, height: 2},
     shadowRadius: 4,
     // shadows for Android
-    elevation: 5 
+    elevation: 5
   },
 
   displayRow: {
@@ -250,6 +252,18 @@ export default StyleSheet.create({
     width: '100%'
   },
 
+  buttonStyleLogout: {
+    marginTop: height *0.03,
+    backgroundColor: COLOURS.logoutRed,
+    borderRadius: width*0.03,
+    borderWidth:2,
+    borderColor:COLOURS.secondaryRed,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: height *0.07,
+    width: '100%'
+  },
+
   buttonText: {
     color: COLOURS.accentWhite,
     fontWeight:'500'
@@ -365,6 +379,88 @@ export default StyleSheet.create({
   radioLabel: {
     fontSize: width*0.04,
     color: COLOURS.black
+  },
+
+  fabBuffer: {
+    height: height * 0.12
+  },
+
+  onboardContainer: {
+    flex: 1,
+    backgroundColor: COLOURS.backgroundWhite
+  },
+
+  onboardScroll: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: height * 0.05,
+    paddingHorizontal: width *0.064
+  },
+
+  logo: {
+    width: width * 0.5,
+    height: height * 0.15,
+    aspectRatio: 2.5,
+    marginTop: height * 0.03,
+    marginBottom: height * 0.04
+  },
+
+  onboardContent: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%'
+  },
+
+  onboardHeader: {
+    fontSize: width * 0.075,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: height * 0.015,
+    color: COLOURS.secondary
+  },
+
+  onboardSubtitle: {
+    fontSize: width * 0.043,
+    textAlign: 'center',
+    marginBottom: height * 0.04,
+    color: COLOURS.primary
+  },
+
+  avatarContainer: {
+    width: width * 0.3,
+    height: width * 0.3,
+    borderRadius: (width * 0.3 ) /2,
+    backgroundColor: COLOURS.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: height * 0.015,
+    elevation: 5,
+    shadowOffset: {width: 0 , height: 2},
+    shadowColor: COLOURS.black,
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    
+    borderColor: COLOURS.secondary
+  },
+
+  avatarText: {
+    color: 'white',
+    fontSize: width *0.085,
+    fontWeight: 'bold'
+  },
+
+  profileName: {
+    fontSize: width * 0.07,
+    fontWeight: '600',
+    color: COLOURS.black,
+    marginBottom: height * 0.02,
+    borderBottomWidth: 2
+  },
+
+  profileHeader: {
+    alignItems: 'center',
+    marginBottom: height * 0.03
   }
 
 })  

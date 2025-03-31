@@ -246,6 +246,7 @@ const Reminders = () => {
               </View>
 
             </View>
+            
           )}
           ListEmptyComponent={<View style={styles.tempStyle}><Text>No Reminders Yet!</Text></View>} 
         />
@@ -368,7 +369,7 @@ const Reminders = () => {
           </View>
 
         </Modal>
-
+        <View style={styles.fabBuffer}/>
       </View>
     </SafeAreaView>
   )

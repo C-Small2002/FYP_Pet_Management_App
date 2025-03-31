@@ -3,10 +3,12 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndB
 import torch
 import uvicorn
 
+from peft import PeftModel
+
 app = FastAPI()
 
-model_path = "./llama_finetuned_lora"
-tokenizer = AutoTokenizer.from_pretrained(model_path)
+model_name = "meta-llama/Llama-2-7b-chat-hf"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 #config for loading in 4-bit percision
 bnb_config = BitsAndBytesConfig(
@@ -16,13 +18,17 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16
 )
 
-model = AutoModelForCausalLM.from_pretrained(
-    model_path,
+base_model = AutoModelForCausalLM.from_pretrained(
+    model_name,
     torch_dtype=torch.float16,
     device_map="auto",
     quantization_config=bnb_config,
     offload_folder="./offload"
 )
+
+lora_model = "/home/ubuntu/FYP_Pet_Management_App/llama_finetuned_lora"
+model = PeftModel.from_pretrained(base_model, lora_model)
+model = model.merge_and_unload()
 
 text_generation = pipeline(
     "text-generation",

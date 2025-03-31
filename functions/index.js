@@ -165,6 +165,30 @@ exports.sendReminderCompleted = functions
         }
         else {
             console.log(`Updating Reminder: ${newData.title}`);
+
+            let nextReminderDate = new Date(newData.reminderDateTime.toDate());
+
+            if (newData.recurrence === 'Daily') {
+                nextReminderDate.setDate(nextReminderDate.getDate() + 1);
+            }
+            else if (newData.recurrence === 'Weekly') {
+                nextReminderDate.setDate(nextReminderDate.getDate() + 7);
+            }
+            else if (newData.recurrence === 'Montly') {
+                nextReminderDate.setMonth(nextReminderDate.getMonth() + 1);
+            }
+            else if (newData.recurrence === 'Yearly') {
+                nextReminderDate.setDate(nextReminderDate.getFullYear() + 1);
+            }
+
+            await db.collection("reminders").doc(context.params.reminderId).update({
+                notified: false,
+                done: false,
+                reminderDateTime: admin.firestore.Timestamp.fromDate(nextReminderDate),
+            });
+
         }
 
-    })
+        return null;
+
+    });

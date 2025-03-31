@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, Switch, Alert } from 'react-native'
+import { View, Text, ScrollView, Image, Switch, Alert, Pressable, TextInput } from 'react-native'
 import React, {use, useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { router } from 'expo-router'
@@ -9,6 +9,7 @@ import CustButton from '../components/custbutton'
 import { auth, createUserWithEmailAndPassword, db } from '../../firebaseconfig'
 import { collection } from 'firebase/firestore'
 import { addDoc, doc, setDoc } from 'firebase/firestore'
+import RNDateTimePicker from '@react-native-community/datetimepicker'
 
 const Register = () => {
 
@@ -23,8 +24,25 @@ const Register = () => {
   
   const [isPrimaryUser, setIsPrimaryUser] = useState(true);
   const [submitting, setSubmitting] = useState(false);
+  const [dobDate, setDobDate] = useState(new Date());
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   const toggleUserType = () =>  setIsPrimaryUser((prevState => !prevState));
+
+  const toggleDatePicker = () => setShowDatePicker(!showDatePicker);
+
+  const onDatePickerChange = (event, selectedDate) => {
+    const currentDate = selectedDate || dobDate; //if no date is selected will default back to currently stored date
+    setDobDate(currentDate);
+
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); //Adding 1 cause months are 0 based
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day}`;
+
+    setForm((prev) => ({...prev, dob: formattedDate}));
+    toggleDatePicker();
+  }
 
   const handleRegister = async () => {
 
@@ -42,6 +60,8 @@ const Register = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password);
       const user = userCredential.user;
+
+      let familyId = null;
 
       if (isPrimaryUser){
         const family = await addDoc(collection(db,'family'), {
@@ -65,7 +85,7 @@ const Register = () => {
       });
 
       Alert.alert('Success', 'Registration Successful!');
-      router.push('./login');
+      router.replace('./login');
     } 
     catch (error) {
       Alert.alert('Registration Failed', error.message);
@@ -98,11 +118,30 @@ const Register = () => {
           handleTextChanged = {(event) => setForm({...form, surname: event})}
         />
 
-        <AuthField
-          title= "Date of Birth"
-          placeholder= "Date of Birth"
-          handleTextChanged = {(event) => setForm({...form, dob: event})}
-        />
+        {!showDatePicker && (
+          <Pressable onPress={toggleDatePicker} style={styles.authFieldSpacing}>
+            <Text style={styles.header2}>Date of Birth</Text>
+            <View style={styles.formContainer}>
+              <TextInput
+                style={styles.formInput}
+                placeholder="Date of Birth"
+                value={form.dob}
+                editable={false}
+                onPressIn={toggleDatePicker}
+              />
+            </View>
+          </Pressable>
+        )}
+
+        {showDatePicker && (
+          <RNDateTimePicker
+            mode="date"
+            display='spinner'
+            value={dobDate}
+            onChange={onDatePickerChange}
+            maximumDate={new Date()}
+          />
+        )}
 
         <AuthField
           title="Email"
