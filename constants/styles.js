@@ -461,6 +461,15 @@ export default StyleSheet.create({
   profileHeader: {
     alignItems: 'center',
     marginBottom: height * 0.03
+  },
+
+  map: {
+    flex: 1,
+  },
+
+  mapContainer: {
+    flex: 1,
+    backgroundColor: COLOURS.backgroundWhite
   }
 
 })  

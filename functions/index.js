@@ -102,7 +102,8 @@ exports.sendReminderCompleted = functions
     .region("europe-west1")
     .firestore.document("reminders/{reminderId}")
     .onUpdate(async (change, context) => {
-        
+
+        console.log(context.params.reminderId);
         const newData = change.after.data();
         const prevData = change.before.data();
 
@@ -113,19 +114,26 @@ exports.sendReminderCompleted = functions
 
         }
 
+        console.log('log1: made it here');
+
         const userSnapshot = await db.collection("user").doc(newData.completedBy).get();
         if (!userSnapshot.exists) {
             console.error(`User ${newData.completedBy} not found.`);
             return null;
         }
 
+        console.log('Log2: Made it here');
+
         const userData = userSnapshot.data();
-        const userName = userData.firstName;
+        const userName = userData.firstname;
+
+        console.log('Log3: Made it here');
 
         const familySnapshot = await db.collection("user")
             .where("fid","==",newData.fid)
             .get();
 
+        console.log('Log4: made it here');
         const tokens = [];
         familySnapshot.forEach((doc) => {
             const familyMember = doc.data();
@@ -133,6 +141,8 @@ exports.sendReminderCompleted = functions
                 tokens.push(familyMember.pushToken);
             }
         });
+
+        console.log('Log5: made it here');
 
         if (tokens.length > 0){
 
@@ -174,17 +184,29 @@ exports.sendReminderCompleted = functions
             else if (newData.recurrence === 'Weekly') {
                 nextReminderDate.setDate(nextReminderDate.getDate() + 7);
             }
-            else if (newData.recurrence === 'Montly') {
+            else if (newData.recurrence === 'Monthly') {
                 nextReminderDate.setMonth(nextReminderDate.getMonth() + 1);
             }
             else if (newData.recurrence === 'Yearly') {
-                nextReminderDate.setDate(nextReminderDate.getFullYear() + 1);
+                nextReminderDate.setFullYear(nextReminderDate.getFullYear() + 1);
             }
+
+            console.log('ReminderId: ', context.params.reminderId)
+
+            
+            const displayDate = nextReminderDate.toDateString();
+
+            const displayTime = nextReminderDate.toLocaleTimeString([],{
+                hour: '2-digit',
+                minute: '2-digit'
+            });
 
             await db.collection("reminders").doc(context.params.reminderId).update({
                 notified: false,
                 done: false,
                 reminderDateTime: admin.firestore.Timestamp.fromDate(nextReminderDate),
+                date: displayDate,
+                time: displayTime
             });
 
         }

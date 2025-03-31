@@ -110,16 +110,24 @@ const Reminders = () => {
   const handleMarkComplete = async (id) => {
 
     try {
-      
+      const user = auth.currentUser;
+
+      if(!user){
+        throw new Error("No user is logged in");
+      }
+
       const reminder = doc(db, 'reminders', id);
-      await updateDoc(reminder, {done : true});
+      await updateDoc(reminder, {
+        done : true,
+        completedBy : user.uid
+      });
       setReminders((prev) =>
-        prev.map((item) => (item.id === id ? {...item, done:true}: item))
+        prev.map((item) => (item.id === id ? {...item, done:true, completedBy:user.uid}: item))
       );
 
     } 
     catch (error) {
-      throw new Error('Error marking as complete:' ,error)
+      console.error('Error Marking complete: ',error);
     }
 
   };

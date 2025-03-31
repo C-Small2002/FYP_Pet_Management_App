@@ -81,7 +81,6 @@ export const scheduleReminder = async (title, message, reminderDate) => {
 export const setUpNotificationListener = () => {
     Notifications.addNotificationReceivedListener(notification => {
         console.log("Received ", notification);
-        Alert.alert(`New Reminder: ${notification.request.content.title}`);
     });
 
     Notifications.addNotificationResponseReceivedListener(response => {

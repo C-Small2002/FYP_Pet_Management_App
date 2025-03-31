@@ -28,7 +28,6 @@ const PocketVet = () => {
       const user = auth.currentUser;
 
       if(user){
-        const db = getFirestore();
         const docRef  = doc(db, 'user', user.uid);
         const docSnap = await getDoc(docRef);
 

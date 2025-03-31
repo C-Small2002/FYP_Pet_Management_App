@@ -21,7 +21,8 @@
         "FIREBASE_STORAGE_BUCKET": "zoomiesfyp.firebasestorage.app",
         "FIREBASE_MESSAGING_SENDER_ID": "197426036461",
         "FIREBASE_APP_ID": "1:197426036461:web:825e67873fcd03821896e4",
-        "FIREBASE_MEASUREMENT_ID": "G-SQERRHSW1Y"
+        "FIREBASE_MEASUREMENT_ID": "G-SQERRHSW1Y",
+        "PLACES_API_KEY": "AIzaSyDwNjkRSGhU2rw3wA_V-1HIe225HtsIKqw"
       }
     },
     "production": {

@@ -8,7 +8,7 @@ import images from '../../constants/images'
 import AuthField from '../components/authfield'
 import { Link, router } from 'expo-router'
 import { db, signInWithEmailAndPassword, auth } from '../../firebaseconfig'
-import { collection, query, where, getDocs } from 'firebase/firestore'
+import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore'
 import { Alert } from 'react-native'
 
 const Login = () => {
@@ -23,14 +23,26 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, form.email, form.password)
       const user = userCredential.user;
+      console.log('User id ', user.uid); //for some reason this allows it to read to uid properly ?????
+      const userRef = doc(db, "user", user.uid);
+      const userDoc = await getDoc(userRef);
 
-      Alert.alert('Login Successful', `Welcome ${user.firstname}!`);
-      router.replace('../../petprofiles');
+      if(userDoc.exists()) {
+        const userData = userDoc.data();
+        console.log('UserDatat:' ,userData);
+        Alert.alert('Login Successful', `Welcome ${userData.firstname}!`);
+        router.replace('../../petprofiles');
+      }
+      else {
+        Alert.alert('Login Successful', `Welcome!`);
+        router.replace('../../petprofiles');
+      }
 
     }
 
     catch (error) {
       Alert.alert('Login Failed', error.message);
+      setSubmitting(false);
     }
     
   }
