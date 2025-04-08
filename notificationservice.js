@@ -39,7 +39,6 @@ export const registerForPushNotifications = async () => {
     try {
         token = (await Notifications.getExpoPushTokenAsync()).data;
         console.log('Expo Push Token:', token);
-        console.log('Expo ProjectID:', Constants.expoConfig.extra.eas.projectId || 'N/A');
     } 
     catch (error) {
         console.error('Error getting push token', error);

@@ -29,7 +29,7 @@
         "WAKE_LOCK",
         "VIBRATE"
       ],
-      "package": "com.fyp.zoomies",
+      "package": "com.anonymous.zoomies",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyDwNjkRSGhU2rw3wA_V-1HIe225HtsIKqw"
