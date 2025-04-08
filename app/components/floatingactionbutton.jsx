@@ -5,6 +5,7 @@ import styles from '../../constants/styles'
 const FloatingActionButton = ({onPress, icon, position, size}) => {
   return (
     <TouchableOpacity
+      testID='fab-test'
         onPress={onPress}
         style={[
           styles.fab,
@@ -13,6 +14,7 @@ const FloatingActionButton = ({onPress, icon, position, size}) => {
         ]}
     >
         <Image 
+          testID='fab-icon-test'
           source = {icon}
           style={styles.fabIcon}
         />

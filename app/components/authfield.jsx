@@ -26,7 +26,7 @@ const AuthField = ({title, value, placeholder, handleTextChanged, otherstyles, .
         />
 
         {(title === "Password" || title === "Confirm Password") && (
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} testID="toggle-password">
             <Image
               source={!showPassword ? icons.eye : icons.eye_hidden}
               style={styles.formIcon}
@@ -36,7 +36,7 @@ const AuthField = ({title, value, placeholder, handleTextChanged, otherstyles, .
         )}
 
         {(title === "Medical Condition" || title === "Vaccine") && (
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} testID='delete-icon'>
             <Image
               source={icons.bin}
               style={styles.formIcon}

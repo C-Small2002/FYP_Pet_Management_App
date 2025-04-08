@@ -120,6 +120,7 @@ const VetLocator = () => {
 
         {vets.map((vet) =>(
           <Marker
+            testID={`marker-${vet.id}`}
             key={vet.id}
             coordinate={{
               latitude: vet.latitude,

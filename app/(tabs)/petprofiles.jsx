@@ -1,5 +1,5 @@
 import { ScrollView, StyleSheet, Text, View, Image, FlatList, Modal, Alert, TouchableOpacity, TextInput } from 'react-native'
-import React, {useEffect, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import styles from '../../constants/styles'
 import PetDropdown from '../components/petdropdown'
@@ -10,8 +10,9 @@ import icons from '../../constants/icons'
 import AuthField from '../components/authfield'
 import CustButton from '../components/custbutton'
 import { auth, db } from '../../firebaseconfig'
-import { addDoc, collection, doc, getDoc, getDocs, setDoc, onSnapshot, query, updateDoc, where } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, getDocs, setDoc, onSnapshot, query, updateDoc, where, deleteDoc } from 'firebase/firestore'
 import { setUpNotificationListener, registerForPushNotifications } from '../../notificationservice'
+import { useFocusEffect } from 'expo-router'
 
 
 const PetProfiles = () => {
@@ -49,12 +50,14 @@ const PetProfiles = () => {
   })
   const [editFormBackup, setEditFormBackup] = useState(null); //Stores the original state of the data so that if user cancels their edit, original stae will be restored if they go back into the edit modal
 
-  //This is being called on this page as it is the page a user is redirected to after first registering for push notifications
+  //This is being called on this page as it is the page a user is redirected to after first logining in
   useEffect (() =>{
 
       const setupNotifications = async () => {
 
         try {
+          //Shows a prompt asking user if they want to allow push notifications
+          //If they press yes, the device will be registered and a push token created that then gets added to the users firebase profile
           const token = await registerForPushNotifications();
           if (token && auth.currentUser){
             await setDoc(doc(db, 'user', auth.currentUser.uid), {pushToken: token}, {merge: true});
@@ -74,75 +77,85 @@ const PetProfiles = () => {
   
     }, []);
 
-  useEffect(() => {
+  //Works the same as useEffect but allows for it to be rerun when the screen comes back into focus
+  //This solves issue with pet details not being loaded after a secondary user links to the primary
+  useFocusEffect(
+    //Ensures that the whole function isnt recreated every time the screen comes into focus. Only is created when notifications permissions are set
+    useCallback(() => {
 
-    const fetchPetDetails = async () => {
-      try {
-        
-        if(!notificationsSet) return; //See setUpNotifications for reason
-        //console.log("Entered useEffect for fetch");
-        const user = auth.currentUser; //gets the current user
-        console.log(user); //NEVER REMOVE EVERYTHING BREAKS
-        if (!user){
-          throw new Error('No user logged in');
-        }
-
-        const userDoc = await getDoc(doc(db, 'user', user.uid));
-
-        if(!userDoc.exists()){
-          throw new Error('No doc found');
-        }
-
-        const familyId = userDoc.data().fid;
-
-        if (!familyId) {
-          throw new Error('User is not linked to a family');
-        }
-
-        const petsCollection = collection(db,'pets');
-        const petsQuery = query(petsCollection, where('fid', '==', familyId));
-        const getAllPets = onSnapshot(petsQuery, (snapshot) => {
-
-          const profiles = []; //array that will be used for the dropdown menu
-          const data = {}; //for accessing and loading pet details
-  
-          snapshot.forEach((doc) => {
-            const pet = doc.data();
-            profiles.push({label: pet.name, value: doc.id}); //pets name displayed in dropdown and the id for the related doc is stored with it
-            data[doc.id] = {...pet}; //doc id is used as the key and pet data is spread out into the data object
-          });
-  
-          setPetProfiles(profiles);
-          setPetData(data);
+      const fetchPetDetails = async () => {
+        try {
           
-        });
+          if(!notificationsSet) return; //See setUpNotifications for reason
+          //console.log("Entered useEffect for fetch");
+          const user = auth.currentUser; //gets the current user
+          
+          if (!user){
+            throw new Error('No user logged in');
+          }
 
-       return () => getAllPets(); //Cleans up the listener when the component unmounts
+          //Gets the users doc from firebase
+          const userDoc = await getDoc(doc(db, 'user', user.uid));
 
-      } 
-      catch (error) {
-        Alert.alert('Error', error.message);
-      }
-    };
+          if(!userDoc.exists()){
+            throw new Error('No doc found');
+          }
 
-    fetchPetDetails();
-    console.log(petData);
-    console.log(petProfiles);
+          const familyId = userDoc.data().fid;
 
-  }, [notificationsSet]); //[] controls when the useEffect runs - runs on mount and when notificationsSet is true - this prevents issue descirbed above
+          if (!familyId) {
+            throw new Error('User is not linked to a family');
+          }
+          //Getting the pets collection and then filtering for only pets belonging to this family
+          const petsCollection = collection(db,'pets');
+          const petsQuery = query(petsCollection, where('fid', '==', familyId));
+          //onSnapshot listesns for updates in the specified document and will trigger the callback when there are any updates, keeping data in the UI up to date
+          const getAllPets = onSnapshot(petsQuery, (snapshot) => {
 
+            const profiles = []; //array that will be used for the dropdown menu
+            const data = {}; //for accessing and loading pet details
+            
+            //Loops through every pet doc found
+            snapshot.forEach((doc) => {
+              const pet = doc.data();
+              profiles.push({label: pet.name, value: doc.id}); //pets name displayed in dropdown and the id for the related doc is stored with it
+              data[doc.id] = {...pet}; //doc id is used as the key and pet data is spread out into the data object
+            });
+    
+            setPetProfiles(profiles);
+            setPetData(data);
+            
+          });
+
+        return () => getAllPets(); //Cleans up the listener when the component unmounts
+
+        } 
+        catch (error) {
+          Alert.alert('Error', error.message);
+        }
+      };
+
+      fetchPetDetails();
+      //console.log(petData);
+      //console.log(petProfiles);
+
+    }, [notificationsSet]) //[] controls when the useEffect runs - runs on mount and when notificationsSet is true - this prevents issue descirbed above
+  );
+
+  //Handler for the dropdown
   const handlePetSelect = (selectedPet) => {
-    console.log(selectedPetData)
+    console.log('handlePetSelect triggered for:', selectedPet);
     if (selectedPet && petData[selectedPet]){
       setSelectedPetData(petData[selectedPet]);
-      setEditForm({...petData[selectedPet], id:selectedPet});
-      console.log(editForm.id)
+      setEditForm({...petData[selectedPet], id:selectedPet});//When the modal is opened in edit mode, details will already be loaded which prevents stuttering
+      //console.log(editForm.id)
     }
     else{
       setSelectedPetData(null)
     }
   };
-
+  //Adds a new empty string to the array in the specified field( medicalconditions)
+  //This allows for a new form to then be displayed on the page which the user can type into
   const addDyField = (field) => {
     if(isEditMode){
       setEditForm((prevForm) => ({
@@ -156,8 +169,10 @@ const PetProfiles = () => {
     }
   };
 
+  //Removes a specific entry in the field passed
+  //Field specifies which array it belongs to and the index is for what specific entry of that array
   const removeDyField = (field, index) => {
-    const updateEditField = editForm[field].filter((_, i) => i !== index);
+    const updateEditField = editForm[field].filter((_, i) => i !== index); //Fltering the field to keep everything but that specific index
     const updateAddField = addForm[field].filter((_, i) => i !== index);
     if (isEditMode){
       setEditForm((prevForm) => ({...prevForm, [field]: updateEditField}));
@@ -168,15 +183,17 @@ const PetProfiles = () => {
     
   };
 
+  //Updates a specific entry in the array with a new value
   const updateDyField = (field, index, value) => {
     if (isEditMode){
-      setEditForm((prevForm) => ({...prevForm, [field]: prevForm[field].map((item, i) => (i ===index ? value :item))}));
+      setEditForm((prevForm) => ({...prevForm, [field]: prevForm[field].map((item, i) => (i ===index ? value :item))})); //Goes through the whole form and if i equals the passed index, updates that
     }
     else {
       setAddForm((prevForm) => ({...prevForm, [field]: prevForm[field].map((item, i) => (i ===index ? value :item))}));
     }
   };
 
+  //Saves the pet details from the add or edit form to firebase - this will trigger an update that
   const handleSavePet = async (isEditMode, editForm, addForm, setIsModalVisible, setIsEditMode) => {
     try {
       const user = auth.currentUser;
@@ -243,6 +260,48 @@ const PetProfiles = () => {
     }
   }
 
+  //Deletes the selected pet
+  const handleDeletePet = async() => {
+
+    try {
+
+      if(!editForm.id){
+        throw new Error('No Pet Selected');
+      }
+
+      //Sends an alert to the user with two options - waits for the user to answer before continuing
+      const confirm = await new Promise((resolve) => {
+
+        Alert.alert(
+          'Confrim Delete',
+          'Are you sure you want to delete this pet?',
+          [
+            { text: 'Cancel', style: 'cancel', onPress: () => resolve(false) },
+            { text: 'Delete', style: 'destructive', onPress: () => resolve(true) },
+          ]
+        );
+
+      });
+
+      //If user presses cancel, confrim will be false and the delete won't go through,  otherwise it will proceed
+      if(!confirm){
+        return;
+      };
+
+      const petRef = doc(db, 'pets', editForm.id);
+      await deleteDoc(petRef);
+      setIsModalVisible(false);
+      setIsEditMode(false);
+
+    }
+    catch(error){
+
+      Alert.alert('Error deleting pet', error.message);
+
+    };
+
+  }
+
   return (
     <SafeAreaView style={styles.background}>
       <View style={styles.defaultContainer}>
@@ -250,6 +309,7 @@ const PetProfiles = () => {
 
         <ScrollView>
           
+          {/*Uses conditional rendering to make sure that nothing is displayed if theres no pet selected in the dropdown*/}
           {selectedPetData && (
 
             <View style={styles.profileContainer}>
@@ -291,6 +351,7 @@ const PetProfiles = () => {
 
           )}
 
+          {/* Checks if there is a pet selected and if there are any stored medical conditions */}
           {selectedPetData && selectedPetData.medicalconditions.length > 0 && (
             
             <View style={styles.profileContainer}>
@@ -305,7 +366,7 @@ const PetProfiles = () => {
             
           )}
 
-          {selectedPetData && selectedPetData.medicalconditions.length > 0 && (
+          {selectedPetData && selectedPetData.vaccines.length > 0 && (
             
             <View style={styles.profileContainer}>
               <Text style={styles.header}>Vaccines</Text>
@@ -340,7 +401,7 @@ const PetProfiles = () => {
           }
         }}
         />
-
+        
         <Modal
           visible={isModalVisible}
           transparent={true}
@@ -377,7 +438,7 @@ const PetProfiles = () => {
                 <AuthField
                   title='Sex'
                   placeholder='Male/Female'
-                  value={!isEditMode ? addForm.name : editForm.name}
+                  value={!isEditMode ? addForm.sex : editForm.sex}
                   handleTextChanged={!isEditMode ?(val) => setAddForm({...addForm, sex: val}) : (val) => setEditForm({...editForm, sex: val})}
                 />
 
@@ -480,6 +541,13 @@ const PetProfiles = () => {
                     }
                   }}
                 />
+                {isEditMode && (
+                  <CustButton
+                    title='Delete Pet'
+                    handlePress={handleDeletePet}
+                  />
+                )}
+                
 
               </View>
             </View> 

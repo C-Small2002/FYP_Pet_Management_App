@@ -1,12 +1,12 @@
 import { Button, ScrollView, StyleSheet, Text, TextInput, View, Dimensions, Alert } from 'react-native'
-import React, {useEffect, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import axios from 'axios'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from '../../constants/styles';
 import PetDropdown from '../components/petdropdown';
-import { getAuth } from 'firebase/auth';
 import { getFirestore, doc, getDoc, collection, query, where, onSnapshot } from 'firebase/firestore';
 import { auth, db } from '../../firebaseconfig'
+import { useFocusEffect } from 'expo-router';
 
 const PocketVet = () => {
 
@@ -24,7 +24,6 @@ const PocketVet = () => {
   useEffect(() => {
     const fetchUserAge = async () => {
 
-      const auth = getAuth();
       const user = auth.currentUser;
 
       if(user){
@@ -56,60 +55,62 @@ const PocketVet = () => {
 
   }, []);
 
-  useEffect(() => {
+  useFocusEffect(
+    useCallback(() => {
 
-    const fetchPetDetails = async () => {
-      try {
-        
-        const user = auth.currentUser; //gets the current user
-        console.log(user); //NEVER REMOVE EVERYTHING BREAKS
-        if (!user){
-          throw new Error('No user logged in');
-        }
-
-        const userDoc = await getDoc(doc(db, 'user', user.uid));
-
-        if(!userDoc.exists()){
-          throw new Error('No doc found');
-        }
-
-        const familyId = userDoc.data().fid;
-
-        if (!familyId) {
-          throw new Error('User is not linked to a family');
-        }
-
-        const petsCollection = collection(db,'pets');
-        const petsQuery = query(petsCollection, where('fid', '==', familyId));
-        const getAllPets = onSnapshot(petsQuery, (snapshot) => {
-
-          const profiles = []; //array that will be used for the dropdown menu
-          const data = {}; //for accessing and loading pet details
-  
-          snapshot.forEach((doc) => {
-            const pet = doc.data();
-            profiles.push({label: pet.name, value: doc.id}); //pets name displayed in dropdown and the id for the related doc is stored with it
-            data[doc.id] = {...pet}; //doc id is used as the key and pet data is spread out into the data object
-          });
-  
-          setPetProfiles(profiles);
-          setPetData(data);
+      const fetchPetDetails = async () => {
+        try {
           
-        });
+          const user = auth.currentUser; //gets the current user
+          console.log(user); //NEVER REMOVE EVERYTHING BREAKS
+          if (!user){
+            throw new Error('No user logged in');
+          }
 
-       return () => getAllPets(); //Cleans up the listener when the component unmounts
+          const userDoc = await getDoc(doc(db, 'user', user.uid));
 
-      } 
-      catch (error) {
-        Alert.alert('Error', error.message);
-      }
-    };
+          if(!userDoc.exists()){
+            throw new Error('No doc found');
+          }
 
-    fetchPetDetails();
-    console.log(petData);
-    console.log(petProfiles);
+          const familyId = userDoc.data().fid;
 
-  }, []);
+          if (!familyId) {
+            throw new Error('User is not linked to a family');
+          }
+
+          const petsCollection = collection(db,'pets');
+          const petsQuery = query(petsCollection, where('fid', '==', familyId));
+          const getAllPets = onSnapshot(petsQuery, (snapshot) => {
+
+            const profiles = []; //array that will be used for the dropdown menu
+            const data = {}; //for accessing and loading pet details
+    
+            snapshot.forEach((doc) => {
+              const pet = doc.data();
+              profiles.push({label: pet.name, value: doc.id}); //pets name displayed in dropdown and the id for the related doc is stored with it
+              data[doc.id] = {...pet}; //doc id is used as the key and pet data is spread out into the data object
+            });
+    
+            setPetProfiles(profiles);
+            setPetData(data);
+            
+          });
+
+        return () => getAllPets(); //Cleans up the listener when the component unmounts
+
+        } 
+        catch (error) {
+          Alert.alert('Error', error.message);
+        }
+      };
+
+      fetchPetDetails();
+      console.log(petData);
+      console.log(petProfiles);
+
+    }, [])
+  );
 
   const sendMessage = async() =>{
     if (!input.trim()) return; //stops any empty messages from being sent

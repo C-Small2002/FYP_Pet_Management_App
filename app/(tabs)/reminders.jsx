@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image, Modal, Switch, Pressable, Platform, TextInput, Alert } from 'react-native'
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useCallback, useEffect, useRef, useState} from 'react'
 import styles from '../../constants/styles'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '../../constants/icons'
@@ -11,6 +11,7 @@ import { addDoc, collection, deleteDoc, onSnapshot, query, where , doc, getDoc, 
 import { RadioGroup } from 'react-native-radio-buttons-group'
 import RNDateTimePicker from '@react-native-community/datetimepicker'
 import { scheduleReminder } from '../../notificationservice'
+import { useFocusEffect } from 'expo-router'
 
 
 const Reminders = () => {
@@ -53,58 +54,49 @@ const Reminders = () => {
     setForm((prev) => ({...prev, time: currentTime.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}));
     toggleTimePicker();
   }
-
-  useEffect(() => {
-    const fetchReminders = async () => {
-      try {
-        
-        const user = auth.currentUser;
-  
-        if(!user){
-          throw new Error('No User Logged in');
-        }
-  
-        const userDoc = await getDoc(doc(db, 'user', user.uid));
-  
-          if(!userDoc.exists()){
-            throw new Error('No doc found');
+  //Solves same issue described in petprofiles
+  useFocusEffect(
+    useCallback(() => {
+      const fetchReminders = async () => {
+        try {
+          
+          const user = auth.currentUser;
+    
+          if(!user){
+            throw new Error('No User Logged in');
           }
-  
-          const familyId = userDoc.data().fid;
-  
-          if (!familyId) {
-            throw new Error('User is not linked to a family');
-          }
-  
-          const remindersCollection = collection(db,'reminders');
-          const remindersQuery = query(remindersCollection,where('fid','==',familyId));7
-          const getAllReminders = onSnapshot(remindersQuery, (snapshot) =>{
-            const remindersList = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}));
-            setReminders(remindersList);
-            console.log(remindersList);
+    
+          const userDoc = await getDoc(doc(db, 'user', user.uid));
+    
+            if(!userDoc.exists()){
+              throw new Error('No doc found');
+            }
+    
+            const familyId = userDoc.data().fid;
+    
+            if (!familyId) {
+              throw new Error('User is not linked to a family');
+            }
+    
+            const remindersCollection = collection(db,'reminders');
+            const remindersQuery = query(remindersCollection,where('fid','==',familyId));7
+            const getAllReminders = onSnapshot(remindersQuery, (snapshot) =>{
+              const remindersList = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}));
+              setReminders(remindersList);
+              console.log(remindersList);
 
-            //Schedule local notification - will work for when app is open - need to set up cloud function for when app is killed
-            remindersList.forEach((reminder) =>{
-              if (!reminder.done) {
-                const reminderDateTime = reminder.reminderDateTime.toDate();
-                console.log(reminderDateTime);
-                if (reminderDateTime > new Date()){
-                  scheduleReminder(reminder.title, `Reminder set for ${reminder.time}`, reminderDateTime);
-                }
-              }
             });
 
-          });
 
-
-          return () => getAllReminders();
-      } 
-      catch (error) {
-        throw new Error('Error fetching reminders', error.message);
-      }
-    };
-    fetchReminders();
-  }, []);
+            return () => getAllReminders();
+        } 
+        catch (error) {
+          throw new Error('Error fetching reminders', error.message);
+        }
+      };
+      fetchReminders();
+    }, [])
+  );
   
   
   const handleMarkComplete = async (id) => {
@@ -323,6 +315,7 @@ const Reminders = () => {
 
               {showDatePicker && (
                 <RNDateTimePicker
+                  testID='dateTimePicker'
                   mode='date'
                   display='spinner'
                   value={date}

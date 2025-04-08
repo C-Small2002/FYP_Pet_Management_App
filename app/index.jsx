@@ -1,10 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View, PixelRatio, Image } from 'react-native';
-import { Link } from 'expo-router';
+import { ScrollView, Text, View, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '../constants/images';
 import { useEffect } from 'react';
-import { registerForPushNotifications, setUpNotificationListener } from '../notificationservice';
 import { auth, db } from '../firebaseconfig';
 import { doc, setDoc } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -14,8 +11,11 @@ import CustButton from './components/custbutton';
 
 export default function App() {
 
+  //Runs when page loads
   useEffect(() => {
+    //Checking if user has a saved login session on the device
     const checkLoggedIn = onAuthStateChanged(auth, (user) => {
+      //If they do bring them straight to the petprofiles page
       if (user){
         router.replace('/petprofiles');
       }
@@ -38,12 +38,12 @@ export default function App() {
 
           <CustButton
             title='Log In'
-            handlePress={() => router.push('./login')}
+            handlePress={() => router.replace('./login')}
           />
 
           <CustButton
             title='Register'
-            handlePress={() => router.push('./register')}
+            handlePress={() => router.replace('./register')}
             
           />
 

@@ -25,6 +25,7 @@ const Register = () => {
   const [isPrimaryUser, setIsPrimaryUser] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [dobDate, setDobDate] = useState(new Date());
+  //state to manage if the date picker is visible or not
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const toggleUserType = () =>  setIsPrimaryUser((prevState => !prevState));
@@ -85,10 +86,11 @@ const Register = () => {
       });
 
       Alert.alert('Success', 'Registration Successful!');
-      router.replace('./login');
+      router.replace('/login');//stops user from going back to register page after registering
     } 
     catch (error) {
       Alert.alert('Registration Failed', error.message);
+      setSubmitting(false);
     }
 
   }
@@ -117,7 +119,7 @@ const Register = () => {
           placeholder= "Surname"
           handleTextChanged = {(event) => setForm({...form, surname: event})}
         />
-
+        {/*If showDatePicker is false, it will show a textinput that can be pushed*/}
         {!showDatePicker && (
           <Pressable onPress={toggleDatePicker} style={styles.authFieldSpacing}>
             <Text style={styles.header2}>Date of Birth</Text>
@@ -132,9 +134,10 @@ const Register = () => {
             </View>
           </Pressable>
         )}
-
+        {/*Shows the datepicker after the textinput is pressed*/}
         {showDatePicker && (
           <RNDateTimePicker
+            testID='dob-picker'
             mode="date"
             display='spinner'
             value={dobDate}
@@ -168,7 +171,7 @@ const Register = () => {
           <Text style={styles.header2}>
             {isPrimaryUser ? "Register as Primary User" : "Register as Secondary User"}
           </Text>
-
+          {/*Allows user to swithc between registering as primary or secondary user */}
           <Switch
             trackColor={{false : '#3066be', true : '#4287f5'}}
             thumbColor={isPrimaryUser ? '#3066be' : '#4287f5'}

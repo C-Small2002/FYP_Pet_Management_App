@@ -5,16 +5,19 @@ import styles from '../../constants/styles'
 const CustButton = ({title, handlePress, isLoading}) => {
 
   const isLogout = title === 'Log Out';
+  const isDelete = title === 'Delete Pet';
 
   return (
     <TouchableOpacity 
-      style={[isLogout ? styles.buttonStyleLogout : styles.buttonStyle]}
+      testID='cust-button'
+      style={[isLogout || isDelete ? styles.buttonStyleLogout : styles.buttonStyle]}
       onPress={handlePress}
     >
       <Text style={styles.buttonText}>{title}</Text>
 
       {isLoading && (
         <ActivityIndicator
+          testID="activity-indicator"
           animating = {isLoading}
           size="small"
         />
