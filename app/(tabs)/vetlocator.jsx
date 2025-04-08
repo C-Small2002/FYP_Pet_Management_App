@@ -34,7 +34,7 @@ const VetLocator = () => {
     const radius = 5000;
     const type = 'veterinary_care';
 
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${PLACES_API_KEY}`;
+    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${process.env.PLACES_API_KEY}`;
 
     try {
 

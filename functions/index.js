@@ -13,8 +13,17 @@ exports.sendReminderNotification = functions
     .onRun(async (context) =>{
         
         console.log("Checking for Reminders...")
-        const timeWindow = admin.firestore.Timestamp.fromDate(new Date(Date.now() - 5 * 60 * 1000));
-        console.log("Current Time is: ",timeWindow);
+        //const timeWindow = admin.firestore.Timestamp.fromDate(new Date(Date.now() - 5 * 60 * 1000));
+        //console.log("Current Time is: ",timeWindow);
+        const now = new Date();
+        const startOfMinute = new Date(now)
+        startOfMinute.setSeconds(0, 0);
+
+        const endOfMinute = new Date(now);
+        endOfMinute.setSeconds(59,999);
+
+        const startTimestamp = admin.firestore.Timestamp.fromDate(startOfMinute);
+        const endTimestamp = admin.firestore.Timestamp.fromDate(endOfMinute);
 
         const allRemindersSnapshot = await db.collection("reminders").get();
 
@@ -29,7 +38,8 @@ exports.sendReminderNotification = functions
         });
 
         const reminderSnapshot = await db.collection("reminders")
-            .where("reminderDateTime", "<=", timeWindow) //Gets due reminders
+            .where("reminderDateTime", ">=", startTimestamp) //Gets due reminders
+            .where("reminderDateTime", "<=", endTimestamp)
             .where("notified", "==", false) //Ensures the notification hasnt been sent
             .get();
 
@@ -91,8 +101,6 @@ exports.sendReminderNotification = functions
             else {
                 console.log("No push tokens found");
             }
-
-
 
         }
 

@@ -59,12 +59,15 @@ const PetProfiles = () => {
           //Shows a prompt asking user if they want to allow push notifications
           //If they press yes, the device will be registered and a push token created that then gets added to the users firebase profile
           const token = await registerForPushNotifications();
-          if (token && auth.currentUser){
-            await setDoc(doc(db, 'user', auth.currentUser.uid), {pushToken: token}, {merge: true});
-         }
 
-         setNotificationsSet(true); //This will ensure that the fetchpetdetials useeffect wont run at the same time which causes 
-                                    //an issue where firebase is updating the doc while the app is trying the fetch the familyID, preventing details from being fetched
+          const unsubscribe = auth.onAuthStateChanged(async (user) => {
+            if (token && user){
+              console.log("Saving pushtoken for user", user.uid);
+              await setDoc(doc(db, 'user', auth.currentUser.uid), {pushToken: token}, {merge: true});
+              setNotificationsSet(true); //This will ensure that the fetchpetdetials useeffect wont run at the same time which causes an issue where firebase is updating the doc while the app is trying the fetch the familyID, preventing details from being fetched
+              unsubscribe();
+            }
+          });
 
         } catch (error) {
           Alert.alert("Notifications not working", error.message);      
