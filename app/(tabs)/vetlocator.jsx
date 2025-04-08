@@ -4,7 +4,7 @@ import styles from '../../constants/styles'
 import * as Location from 'expo-location'
 import MapView, {Marker} from 'react-native-maps'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { PLACES_API_KEY } from '@env'
+
 
 
 const VetLocator = () => {
@@ -34,7 +34,7 @@ const VetLocator = () => {
     const radius = 5000;
     const type = 'veterinary_care';
 
-    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${process.env.PLACES_API_KEY}`;
+    const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=AIzaSyDwNjkRSGhU2rw3wA_V-1HIe225HtsIKqw`;
 
     try {
 
