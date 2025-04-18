@@ -20,7 +20,7 @@ export const registerForPushNotifications = async () => {
             vibrationPattern: [0,250,250,250],
             lightColor: '#FF231F7C'
         });
-    }
+    }   
 
     const {status: existingStatus} = await Notifications.getPermissionsAsync();
 
@@ -48,6 +48,7 @@ export const registerForPushNotifications = async () => {
 
 };
 
+//No longer used - this was for testing if notification permissions would work before creating cloud functions
 export const scheduleReminder = async (title, message, reminderDate) => {
     
     try {

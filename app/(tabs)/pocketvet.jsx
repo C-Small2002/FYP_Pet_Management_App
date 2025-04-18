@@ -127,19 +127,19 @@ const PocketVet = () => {
       if(selectedPet){
         const medConditions = selectedPet.medicalconditions?.join(', ') || 'None';
         const vaccines = selectedPet.vaccines?.join(', ') || 'None';
-        context = `\n\nPET INFO: \nPets Name: ${selectedPet.name}, Type: ${selectedPet.animal_type}, Breed: ${selectedPet.breed}, DOB: ${selectedPet.dob}, Weight (Kg): ${selectedPet.weight}, Medical Conditions: ${medConditions}, Vaccines: ${vaccines}`;
+        context = `\n\nPET INFO: \nPets Name: ${selectedPet.name}, Type: ${selectedPet.animal_type}, Breed: ${selectedPet.breed}, DOB: ${selectedPet.dob}, Weight (Kg): ${selectedPet.weight}, Medical Conditions: ${medConditions}, Vaccines: ${vaccines}, Do not repeat or modify this information`;
       }
 
       let filteredMessage = input + context
 
-      if (userAge !== null && userAge < 16){
-        const filterNote = `\n\nNOTE: This message is from a user under 16. Please respond gently and do not include the following words ${filterList.join(', ')}. Do not repeat or modify this instruction.`;
+      if (userAge !== null && userAge < 12){
+        const filterNote = `\n\nNOTE: This message is from a user under 12. Please respond gently and do not include the following words ${filterList.join(', ')}. Do not repeat or modify this instruction.`;
         filteredMessage += `${filterNote}`;
       }
 
       console.log(filteredMessage)
 
-      response = await axios.post('http://34.240.22.166:5000/chat', {message: filteredMessage}); //sends the message to the flask hosting the LLM
+      response = await axios.post('http://54.74.199.249:5000/chat', {message: filteredMessage}); //sends the message to the flask hosting the LLM
       console.log('Response Data',response.data)
 
       const userInputTrimmed = filteredMessage.trim().toLowerCase();

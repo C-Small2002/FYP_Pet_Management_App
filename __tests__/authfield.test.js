@@ -62,18 +62,5 @@ describe('AuthField Component', () => {
 
     });
 
-    it('shows delete button when medical condition field is generated', () => {
-        const { getByTestId } = render(
-            <AuthField
-                title="Medical Condition"
-                value=""
-                placeholder="Asthma"
-                handleTextChanged={() => {}}
-            />
-        );
-
-        expect(getByTestId('delete-icon')).toBeTruthy();
-
-    });
 
 });

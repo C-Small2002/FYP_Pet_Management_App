@@ -16,7 +16,7 @@ import { useFocusEffect } from 'expo-router'
 
 const Reminders = () => {
 
-  const[reminders,setReminders] =useState([]);
+  const [reminders,setReminders] =useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form, setForm] = useState({ title: '', date: '', time: '', recurrence: ''});
   const [recurring, setRecurring] = useState(false);
@@ -225,7 +225,7 @@ const Reminders = () => {
                 <Text style={styles.reminderTime}>{item.date} at {item.time}</Text>
                 <Text style={styles.reminderTime}>{item.recurring ? `Recurs:  ${item.recurrence}`: "Recurs: One-Time Use"}</Text>
               </View>
-              
+                
 
               <View style={styles.iconView}>
                 

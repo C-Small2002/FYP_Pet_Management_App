@@ -20,7 +20,7 @@ const VetLocator = () => {
 
     const R = 6371; //Earths radius
     const dLat = toRad(lat2 - lat1);
-    const dLong = toRad(long2 - long1);
+    const dLong = toRad(long2 - long1); 
 
     const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLong / 2) **2
 
